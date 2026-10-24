@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>ShineCNDA — Professional Residential & Commercial Cleaning Services</title>
     <meta
       name="description"
@@ -44,7 +44,7 @@
                 blue: '#1D4ED8',      // Precision Royal Blue
                 blueHover: '#1E40AF',
                 blueLight: '#EFF6FF',
-                green: '#059669',     // Pure Emerald Green (for Trust & Eco)
+                green: '#059669',     // Pure Emerald Green
                 greenLight: '#ECFDF5',
               },
               surface: {
@@ -64,10 +64,19 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-      body {
+      /* Strict Zero-Horizontal-Scroll Enforcer */
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
+      }
+      *, *::before, *::after {
+        box-sizing: border-box;
       }
       
       /* Professional Slider Styling */
@@ -130,18 +139,18 @@
       }
     </style>
   </head>
-  <body class="bg-white text-slate-900 selection:bg-brand-blue selection:text-white">
+  <body class="bg-white text-slate-900 selection:bg-brand-blue selection:text-white w-full max-w-full overflow-x-hidden">
 
-    <!-- Top Announcement Bar: Clean, Authoritative Solid Navy -->
-    <div class="bg-navy-900 text-white text-[12px] font-medium py-2 px-4 border-b border-navy-800">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Top Announcement Bar: Clean, Fully Responsive -->
+    <div class="bg-navy-900 text-white text-[12px] font-medium py-2 px-4 border-b border-navy-800 w-full">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
         <div class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-brand-green text-white">
+          <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-brand-green text-white shrink-0">
             <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
           </span>
-          <span><strong>Spring Scheduling:</strong> 15% recurring savings on bi-weekly residential and commercial contracts</span>
+          <span class="break-words"><strong>Spring Scheduling:</strong> 15% recurring savings on bi-weekly residential and commercial contracts</span>
         </div>
-        <div class="hidden sm:flex items-center gap-4 text-slate-300">
+        <div class="hidden sm:flex items-center gap-4 text-slate-300 text-xs shrink-0">
           <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-green"></i> $5,000,000 Bonded & Insured</span>
           <span>·</span>
           <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-3.5 h-3.5 text-brand-green"></i> 24-Hour Clean Guarantee</span>
@@ -150,11 +159,11 @@
     </div>
 
     <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-6">
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-200 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
         
         <!-- Brand Wordmark -->
-        <a href="#" class="flex items-center gap-2.5 group">
+        <a href="#" class="flex items-center gap-2.5 shrink-0 group">
           <div class="w-8 h-8 rounded-lg bg-navy-900 flex items-center justify-center text-white font-bold text-sm shadow-sm">
             <i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i>
           </div>
@@ -167,7 +176,7 @@
         </a>
 
         <!-- Clean Navigation Links -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-600">
           <a href="#results" class="hover:text-brand-blue transition-colors">Before & After</a>
           <a href="#services" class="hover:text-brand-blue transition-colors">Services</a>
           <a href="#estimator" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
@@ -179,7 +188,7 @@
         </nav>
 
         <!-- Right Action Zone -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 shrink-0">
           <a
             href="tel:+18005557446"
             class="hidden lg:flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-brand-blue transition-colors py-2 px-3 rounded-lg border border-slate-200 hover:border-slate-300"
@@ -190,7 +199,7 @@
 
           <a
             href="#estimator"
-            class="px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm transition-all duration-150 whitespace-nowrap"
+            class="px-4 sm:px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm transition-all duration-150 whitespace-nowrap"
           >
             Get Estimate
           </a>
@@ -212,7 +221,7 @@
       <!-- Mobile Navigation Drawer -->
       <div
         id="mobileMenu"
-        class="hidden md:hidden border-b border-slate-200 bg-white px-5 pt-3 pb-6 shadow-xl"
+        class="hidden md:hidden border-b border-slate-200 bg-white px-5 pt-3 pb-6 shadow-xl w-full"
       >
         <div class="flex flex-col space-y-3 text-sm font-semibold text-slate-800">
           <a href="#results" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-blue flex items-center justify-between">
@@ -255,36 +264,36 @@
       </div>
     </header>
 
-    <main>
-      <!-- Hero Section: Clean, Crisp, Professional Luxury -->
-      <section class="relative bg-white pt-12 pb-18 lg:pt-20 lg:pb-24 border-b border-slate-200">
+    <main class="w-full max-w-full overflow-x-hidden">
+      <!-- Hero Section -->
+      <section class="relative bg-white pt-10 pb-16 lg:pt-18 lg:pb-22 border-b border-slate-200 w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             
             <!-- Left Hero Content -->
             <div class="lg:col-span-7 space-y-6">
               
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-greenLight border border-emerald-200 text-xs font-bold text-brand-green">
-                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                <span>Bonded Luxury Residential & Commercial Facility Care</span>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-greenLight border border-emerald-200 text-xs font-bold text-brand-green max-w-full">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 shrink-0"></i>
+                <span class="truncate">Bonded Luxury Residential & Commercial Facility Care</span>
               </div>
 
               <!-- High-Clarity Headline -->
-              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-navy-900 leading-[1.15]">
-                Flawless spaces. <br />
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-navy-900 leading-[1.15] break-words">
+                Flawless spaces. <br class="hidden sm:inline" />
                 <span class="text-brand-blue">Predictable perfection</span> every single visit.
               </h1>
 
               <!-- Subheading -->
-              <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
-                Bespoke cleaning delivered by rigorously background-checked, W-2 certified specialists. Backed by <strong class="text-slate-900 font-semibold">$5,000,000 comprehensive insurance</strong> and our unconditional <strong class="text-slate-900 font-semibold">24-hour reclean guarantee</strong>.
+              <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal break-words">
+                Bespoke cleaning delivered by thoroughly background-checked, W-2 certified specialists. Backed by <strong class="text-slate-900 font-semibold">$5,000,000 comprehensive insurance</strong> and our unconditional <strong class="text-slate-900 font-semibold">24-hour reclean guarantee</strong>.
               </p>
 
               <!-- Dual CTAs -->
-              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <a
                   href="#estimator"
-                  class="inline-flex justify-center items-center gap-2 px-7 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm transition-colors"
+                  class="inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm transition-colors text-center"
                 >
                   <i data-lucide="calculator" class="w-4 h-4"></i>
                   <span>Calculate Live Estimate</span>
@@ -293,7 +302,7 @@
                 
                 <a
                   href="#results"
-                  class="inline-flex justify-center items-center gap-2 px-7 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-800 bg-surface-50 hover:bg-slate-100 border border-slate-300 transition-colors"
+                  class="inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-800 bg-surface-50 hover:bg-slate-100 border border-slate-300 transition-colors text-center"
                 >
                   <i data-lucide="sparkles" class="w-4 h-4 text-brand-blue"></i>
                   <span>View Before & After Proof</span>
@@ -301,7 +310,7 @@
               </div>
 
               <!-- 4 Bullet Guarantees -->
-              <div class="pt-3 grid grid-cols-2 gap-3 text-xs font-semibold text-slate-700">
+              <div class="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-semibold text-slate-700">
                 <div class="flex items-center gap-2">
                   <div class="w-4 h-4 rounded-full bg-brand-greenLight flex items-center justify-center text-brand-green shrink-0">
                     <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
@@ -331,8 +340,8 @@
             </div>
 
             <!-- Right Hero Card -->
-            <div class="lg:col-span-5">
-              <div class="relative rounded-2xl bg-surface-50 border border-slate-200 p-3 shadow-md">
+            <div class="lg:col-span-5 w-full">
+              <div class="relative rounded-2xl bg-surface-50 border border-slate-200 p-3 shadow-md w-full">
                 
                 <div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-900">
                   <img
@@ -347,13 +356,13 @@
                   <!-- Audit Score Tag -->
                   <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md rounded-md py-1 px-2.5 border border-slate-200 text-xs font-bold text-slate-900 flex items-center gap-1.5 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-brand-green"></span>
-                    <span>99.8% Supervisor Audit Score</span>
+                    <span>99.8% Audit Score</span>
                   </div>
 
                   <!-- Eco Tag -->
                   <div class="absolute top-3 right-3 bg-navy-900/90 text-white rounded-md py-1 px-2.5 text-xs font-semibold flex items-center gap-1.5">
                     <i data-lucide="leaf" class="w-3 h-3 text-emerald-400"></i>
-                    <span>HEPA Micro-Clean</span>
+                    <span>HEPA Clean</span>
                   </div>
 
                   <!-- Bottom Caption -->
@@ -362,13 +371,13 @@
                     <div class="text-base font-bold mt-0.5">Calacatta Marble & Hardwood Handover</div>
                     <div class="flex items-center justify-between text-xs text-slate-300 mt-2 pt-2 border-t border-white/20">
                       <span>Particulate Level: &lt;5 µg/m³</span>
-                      <span class="text-brand-green font-bold">100% Zero-Residue Approved</span>
+                      <span class="text-brand-green font-bold">100% Approved</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- Instant Stat Strip -->
-                <div class="mt-3 grid grid-cols-3 gap-2 text-center text-xs py-2 bg-white rounded-lg border border-slate-200">
+                <div class="mt-3 grid grid-cols-3 gap-1 sm:gap-2 text-center text-xs py-2 bg-white rounded-lg border border-slate-200">
                   <div>
                     <div class="font-extrabold text-slate-900 text-sm">4.9★</div>
                     <div class="text-[10px] text-slate-500 font-medium">Google Rating</div>
@@ -379,7 +388,7 @@
                   </div>
                   <div>
                     <div class="font-extrabold text-brand-blue text-sm">24h</div>
-                    <div class="text-[10px] text-slate-500 font-medium">Reclean Guarantee</div>
+                    <div class="text-[10px] text-slate-500 font-medium">Reclean Promise</div>
                   </div>
                 </div>
 
@@ -390,9 +399,9 @@
         </div>
 
         <!-- Trust Badges Strip -->
-        <div class="mt-14 border-t border-slate-200 bg-surface-50">
+        <div class="mt-12 sm:mt-14 border-t border-slate-200 bg-surface-50 w-full">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-xs text-slate-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-xs text-slate-700">
               
               <div class="flex items-center gap-3">
                 <div class="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-500 shrink-0">
@@ -439,17 +448,17 @@
         </div>
       </section>
 
-      <!-- Section 2: Interactive Before & After Visual Proof (EXACT MATCH TO REFERENCE SCREENSHOT) -->
-      <section id="results" class="py-16 lg:py-24 bg-surface-50 border-b border-slate-200">
+      <!-- Section 2: Interactive Before & After Visual Proof -->
+      <section id="results" class="py-14 sm:py-20 bg-surface-50 border-b border-slate-200 w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <!-- Section Heading -->
-          <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
               <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
               Visual Transformation Proof
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-navy-900">
               Interactive Before & After Clean
             </h2>
             <p class="text-sm sm:text-base text-slate-600 mt-2">
@@ -457,55 +466,53 @@
             </p>
           </div>
 
-          <!-- Room Scene Selector Tabs -->
-          <div class="flex justify-center mb-8">
-            <div class="inline-flex p-1 rounded-lg bg-white border border-slate-200 shadow-sm">
-              <button
-                type="button"
-                onclick="selectSpace(0)"
-                id="spaceBtn0"
-                class="space-btn px-4 py-2 rounded-md text-xs font-bold transition-all bg-navy-900 text-white shadow-sm"
-              >
-                01. Luxury Chef's Kitchen Island
-              </button>
-              <button
-                type="button"
-                onclick="selectSpace(1)"
-                id="spaceBtn1"
-                class="space-btn px-4 py-2 rounded-md text-xs font-bold transition-all text-slate-600 hover:text-slate-900"
-              >
-                02. Executive Glass Boardroom
-              </button>
-              <button
-                type="button"
-                onclick="selectSpace(2)"
-                id="spaceBtn2"
-                class="space-btn px-4 py-2 rounded-md text-xs font-bold transition-all text-slate-600 hover:text-slate-900"
-              >
-                03. Penthouse Master Bathroom
-              </button>
-            </div>
+          <!-- Room Scene Selector Tabs (Fully Responsive, Never Overflows!) -->
+          <div class="flex flex-wrap justify-center gap-2 mb-6 sm:mb-8 max-w-full">
+            <button
+              type="button"
+              onclick="selectSpace(0)"
+              id="spaceBtn0"
+              class="space-btn w-full sm:w-auto px-3.5 py-2 rounded-lg text-xs font-bold transition-all bg-navy-900 text-white shadow-sm border border-navy-900"
+            >
+              01. Luxury Chef's Kitchen Island
+            </button>
+            <button
+              type="button"
+              onclick="selectSpace(1)"
+              id="spaceBtn1"
+              class="space-btn w-full sm:w-auto px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-slate-700 bg-white hover:text-slate-900 border border-slate-200"
+            >
+              02. Executive Glass Boardroom
+            </button>
+            <button
+              type="button"
+              onclick="selectSpace(2)"
+              id="spaceBtn2"
+              class="space-btn w-full sm:w-auto px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-slate-700 bg-white hover:text-slate-900 border border-slate-200"
+            >
+              03. Penthouse Master Bathroom
+            </button>
           </div>
 
-          <!-- The Comparison Viewer Container (Clean, centered at 50%, identical image reveal without jumping) -->
-          <div class="max-w-4xl mx-auto bg-white rounded-xl border border-slate-200 p-3 sm:p-4 shadow-md">
+          <!-- The Comparison Viewer Container -->
+          <div class="max-w-4xl mx-auto bg-white rounded-xl border border-slate-200 p-2.5 sm:p-4 shadow-sm w-full">
             
-            <div class="flex items-center justify-between mb-3 px-1 text-xs">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
-                <span id="spaceNameDisplay" class="font-extrabold text-navy-900 text-sm">Luxury Chef's Kitchen & Island</span>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3 px-1 text-xs">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-green shrink-0"></span>
+                <span id="spaceNameDisplay" class="font-extrabold text-navy-900 text-xs sm:text-sm">Luxury Chef's Kitchen & Island</span>
                 <span class="text-slate-300">·</span>
-                <span id="spaceSpecDisplay" class="text-xs text-slate-500 font-mono">Calacatta Marble & Hardwood Handover</span>
+                <span id="spaceSpecDisplay" class="text-slate-500 font-mono text-[11px]">Calacatta Marble & Hardwood Handover</span>
               </div>
-              <div class="text-[11px] font-mono text-slate-500">
-                Slider Position: <span id="sliderPercentText" class="font-bold text-navy-900">50%</span>
+              <div class="text-[11px] font-mono text-slate-500 shrink-0">
+                Divider: <span id="sliderPercentText" class="font-bold text-navy-900">50%</span>
               </div>
             </div>
 
-            <!-- The Core Split Image Box (Matches User's Reference Screenshot) -->
+            <!-- The Core Split Image Box -->
             <div
               id="sliderContainer"
-              class="relative aspect-[16/10] sm:aspect-[16/9] w-full rounded-lg overflow-hidden select-none cursor-ew-resize border border-slate-200 bg-slate-900"
+              class="relative aspect-[16/10] sm:aspect-[16/9] w-full max-w-full rounded-lg overflow-hidden select-none cursor-ew-resize border border-slate-200 bg-slate-900 touch-none"
             >
               <!-- LAYER 1: AFTER CLEAN (Immaculate Base Layer - 100% Fixed, Zero Distortion) -->
               <img
@@ -533,16 +540,15 @@
                 <div class="dust-overlay"></div>
               </div>
 
-              <!-- VERTICAL DIVIDER LINE + CENTERED HANDLE (Matching Screenshot Reference) -->
+              <!-- VERTICAL DIVIDER LINE + CENTERED HANDLE -->
               <div
                 id="sliderHandle"
                 class="absolute top-0 bottom-0 z-20 pointer-events-none flex items-center justify-center"
                 style="left: 50%; transform: translateX(-50%);"
               >
-                <!-- Crisp White Vertical Hairline with subtle shadow -->
                 <div class="w-[2px] h-full bg-white shadow-[0_0_6px_rgba(0,0,0,0.6)]"></div>
 
-                <!-- Center Diamond/Knob Handle with Left/Right arrows ◄ ► -->
+                <!-- Center Knob Handle with Left/Right arrows ◄ ► -->
                 <div class="absolute w-8 h-8 rounded-full bg-white border border-slate-300 shadow-md flex items-center justify-center text-slate-800">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 16 12">
                     <polygon points="5,6 1,2 1,10"></polygon>
@@ -551,39 +557,37 @@
                 </div>
               </div>
 
-              <!-- BOTTOM-LEFT BADGE: Before Clean (Matches Screenshot) -->
-              <div class="absolute bottom-4 left-4 z-10 bg-white/95 backdrop-blur-sm text-slate-900 text-xs font-semibold px-3 py-1.5 rounded shadow-sm border border-slate-200 pointer-events-none">
+              <!-- BOTTOM-LEFT BADGE: Before Clean -->
+              <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10 bg-white/95 backdrop-blur-sm text-slate-900 text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 rounded shadow-sm border border-slate-200 pointer-events-none">
                 Before Clean
               </div>
 
-              <!-- BOTTOM-RIGHT BADGE: After Clean (Matches Screenshot) -->
-              <div class="absolute bottom-4 right-4 z-10 bg-white/95 backdrop-blur-sm text-slate-900 text-xs font-semibold px-3 py-1.5 rounded shadow-sm border border-slate-200 pointer-events-none">
+              <!-- BOTTOM-RIGHT BADGE: After Clean -->
+              <div class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 bg-white/95 backdrop-blur-sm text-slate-900 text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 rounded shadow-sm border border-slate-200 pointer-events-none">
                 After Clean
               </div>
             </div>
 
-            <!-- Slider Instruction & Range Helper -->
+            <!-- Slider Instruction & Center Reset -->
             <div class="mt-3 flex items-center justify-between text-xs text-slate-500 px-1">
               <span class="flex items-center gap-1.5">
-                <i data-lucide="hand" class="w-3.5 h-3.5 text-brand-blue"></i>
-                <span>Click and drag left or right across the image</span>
+                <i data-lucide="hand" class="w-3.5 h-3.5 text-brand-blue shrink-0"></i>
+                <span class="text-[11px] sm:text-xs">Drag left or right to wipe away dust</span>
               </span>
-              <div class="flex items-center gap-2">
-                <button
-                  type="button"
-                  onclick="setSliderPosition(50)"
-                  class="px-2 py-0.5 text-[11px] font-semibold text-slate-700 bg-surface-50 border border-slate-200 rounded hover:bg-slate-100"
-                >
-                  Reset Center
-                </button>
-              </div>
+              <button
+                type="button"
+                onclick="setSliderPosition(50)"
+                class="px-2 py-0.5 text-[11px] font-semibold text-slate-700 bg-surface-50 border border-slate-200 rounded hover:bg-slate-100"
+              >
+                Center (50%)
+              </button>
             </div>
 
             <!-- Project Metric Details Strip -->
-            <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
               <div class="bg-surface-50 p-2.5 rounded-lg border border-slate-200">
                 <div class="text-slate-400 font-mono text-[10px] uppercase">Service Scope</div>
-                <div id="spaceScope" class="font-bold text-navy-900 mt-0.5">Post-Renovation Stone Reconditioning</div>
+                <div id="spaceScope" class="font-bold text-navy-900 mt-0.5 truncate">Post-Renovation Stone Reconditioning</div>
               </div>
               <div class="bg-surface-50 p-2.5 rounded-lg border border-slate-200">
                 <div class="text-slate-400 font-mono text-[10px] uppercase">Particulate Extraction</div>
@@ -600,16 +604,16 @@
         </div>
       </section>
 
-      <!-- Section 3: Dedicated Service Lines (Clean, Visual, Concise) -->
-      <section id="services" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+      <!-- Section 3: Dedicated Service Lines -->
+      <section id="services" class="py-14 sm:py-20 bg-white border-b border-slate-200 w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
               <i data-lucide="layers" class="w-3.5 h-3.5"></i>
               Tailored Cleaning Scopes
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-navy-900">
               Residential & Commercial Excellence
             </h2>
             <p class="text-sm sm:text-base text-slate-600 mt-2">
@@ -618,17 +622,17 @@
           </div>
 
           <!-- Residential Cards Grid -->
-          <div class="mb-14">
+          <div class="mb-12 sm:mb-14">
             <div class="flex items-center gap-2 mb-6">
               <div class="w-2.5 h-2.5 rounded-full bg-brand-blue"></div>
               <h3 class="text-lg font-extrabold text-navy-900 uppercase tracking-wider">Residential Scopes</h3>
-              <span class="text-xs text-slate-400 font-medium">Condos · Townhomes · Luxury Estates</span>
+              <span class="text-xs text-slate-400 font-medium hidden sm:inline">Condos · Townhomes · Luxury Estates</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
               
               <!-- Card 1 -->
-              <div class="rounded-xl bg-white border border-slate-200 hover:border-slate-300 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="rounded-xl bg-white border border-slate-200 hover:border-slate-300 p-5 sm:p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                   <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-4">
                     <i data-lucide="sparkles" class="w-5 h-5"></i>
@@ -668,7 +672,7 @@
               </div>
 
               <!-- Card 2 (Popular) -->
-              <div class="rounded-xl bg-white border-2 border-brand-blue p-6 shadow-md transition-all flex flex-col justify-between relative">
+              <div class="rounded-xl bg-white border-2 border-brand-blue p-5 sm:p-6 shadow-md transition-all flex flex-col justify-between relative">
                 <div class="absolute -top-3 right-6 bg-brand-blue text-white text-[10px] font-extrabold uppercase tracking-wider py-0.5 px-2.5 rounded shadow-sm">
                   Most Popular
                 </div>
@@ -711,7 +715,7 @@
               </div>
 
               <!-- Card 3 -->
-              <div class="rounded-xl bg-white border border-slate-200 hover:border-slate-300 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="rounded-xl bg-white border border-slate-200 hover:border-slate-300 p-5 sm:p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                   <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-4">
                     <i data-lucide="box" class="w-5 h-5"></i>
@@ -758,13 +762,13 @@
             <div class="flex items-center gap-2 mb-6">
               <div class="w-2.5 h-2.5 rounded-full bg-navy-900"></div>
               <h3 class="text-lg font-extrabold text-navy-900 uppercase tracking-wider">Commercial Scopes</h3>
-              <span class="text-xs text-slate-400 font-medium">Offices · Financial Hubs · Tech Campuses · Medical Clinics</span>
+              <span class="text-xs text-slate-400 font-medium hidden sm:inline">Offices · Financial Hubs · Tech Campuses · Medical Clinics</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
               
               <!-- Commercial 1 -->
-              <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
+              <div class="rounded-xl bg-surface-50 border border-slate-200 p-5 sm:p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
                 <div>
                   <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 text-brand-blue flex items-center justify-center mb-4">
                     <i data-lucide="building" class="w-5 h-5"></i>
@@ -782,7 +786,7 @@
               </div>
 
               <!-- Commercial 2 -->
-              <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
+              <div class="rounded-xl bg-surface-50 border border-slate-200 p-5 sm:p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
                 <div>
                   <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 text-brand-blue flex items-center justify-center mb-4">
                     <i data-lucide="moon" class="w-5 h-5"></i>
@@ -800,7 +804,7 @@
               </div>
 
               <!-- Commercial 3 -->
-              <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
+              <div class="rounded-xl bg-surface-50 border border-slate-200 p-5 sm:p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
                 <div>
                   <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 text-brand-blue flex items-center justify-center mb-4">
                     <i data-lucide="activity" class="w-5 h-5"></i>
@@ -823,16 +827,16 @@
         </div>
       </section>
 
-      <!-- Section 4: Interactive Dual-Mode Quote Estimator (Clean, Executive Design) -->
-      <section id="estimator" class="py-16 lg:py-24 bg-surface-50 border-b border-slate-200">
+      <!-- Section 4: Interactive Dual-Mode Quote Estimator (Fully Responsive) -->
+      <section id="estimator" class="py-14 sm:py-20 bg-surface-50 border-b border-slate-200 w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
               <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
               Instant Live Calculator
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-navy-900">
               Transparent Estimate in Seconds
             </h2>
             <p class="text-sm sm:text-base text-slate-600 mt-2">
@@ -840,12 +844,12 @@
             </p>
 
             <!-- Mode Switcher: Residential vs Commercial -->
-            <div class="inline-flex p-1 rounded-lg bg-white border border-slate-300 shadow-sm mt-6">
+            <div class="inline-flex flex-wrap sm:flex-nowrap p-1 rounded-lg bg-white border border-slate-300 shadow-sm mt-5 max-w-full">
               <button
                 type="button"
                 id="tabResidential"
                 onclick="setMode('residential')"
-                class="px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all"
+                class="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all text-center"
               >
                 Residential Home
               </button>
@@ -853,7 +857,7 @@
                 type="button"
                 id="tabCommercial"
                 onclick="setMode('commercial')"
-                class="px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all"
+                class="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all text-center"
               >
                 Commercial Facility
               </button>
@@ -861,19 +865,19 @@
           </div>
 
           <!-- Estimator Main Card -->
-          <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 lg:p-10 shadow-sm">
+          <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 lg:p-10 shadow-sm w-full">
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               
               <!-- Left Controls -->
-              <div class="lg:col-span-7 space-y-7">
+              <div class="lg:col-span-7 space-y-6 sm:space-y-7 w-full">
                 
                 <!-- RESIDENTIAL CONTROLS -->
-                <div id="residentialControls" class="space-y-6">
+                <div id="residentialControls" class="space-y-6 w-full">
                   
                   <!-- Square Footage Slider -->
-                  <div class="bg-surface-50 p-5 rounded-xl border border-slate-200">
-                    <div class="flex items-center justify-between mb-2">
+                  <div class="bg-surface-50 p-4 sm:p-5 rounded-xl border border-slate-200 w-full">
+                    <div class="flex items-center justify-between mb-2 flex-wrap gap-1">
                       <label for="resSqftSlider" class="text-xs font-extrabold uppercase tracking-wider text-slate-800">
                         Square Footage
                       </label>
@@ -893,17 +897,17 @@
                     />
 
                     <!-- Quick buttons -->
-                    <div class="flex flex-wrap gap-2 mt-3">
-                      <button type="button" onclick="setResSqft(900)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">900 sq.ft</button>
-                      <button type="button" onclick="setResSqft(1800)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">1,800 sq.ft</button>
-                      <button type="button" onclick="setResSqft(2800)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">2,800 sq.ft</button>
-                      <button type="button" onclick="setResSqft(4000)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">4,000+ sq.ft</button>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-3">
+                      <button type="button" onclick="setResSqft(900)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">900 sq.ft</button>
+                      <button type="button" onclick="setResSqft(1800)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">1,800 sq.ft</button>
+                      <button type="button" onclick="setResSqft(2800)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">2,800 sq.ft</button>
+                      <button type="button" onclick="setResSqft(4000)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">4,000+ sq.ft</button>
                     </div>
                   </div>
 
                   <!-- Bedrooms & Bathrooms Counters -->
-                  <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-surface-50 p-4 rounded-xl border border-slate-200">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div class="bg-surface-50 p-3.5 sm:p-4 rounded-xl border border-slate-200">
                       <div class="text-xs font-bold text-slate-500">Bedrooms</div>
                       <div class="flex items-center justify-between mt-2">
                         <span id="resBedDisplay" class="text-lg font-extrabold text-navy-900">3 Beds</span>
@@ -914,7 +918,7 @@
                       </div>
                     </div>
 
-                    <div class="bg-surface-50 p-4 rounded-xl border border-slate-200">
+                    <div class="bg-surface-50 p-3.5 sm:p-4 rounded-xl border border-slate-200">
                       <div class="text-xs font-bold text-slate-500">Bathrooms</div>
                       <div class="flex items-center justify-between mt-2">
                         <span id="resBathDisplay" class="text-lg font-extrabold text-navy-900">2.5 Baths</span>
@@ -926,17 +930,17 @@
                     </div>
                   </div>
 
-                  <!-- Frequency Selector with Emerald Badges -->
+                  <!-- Frequency Selector -->
                   <div>
                     <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-800 mb-2">
                       Cleaning Frequency
                     </label>
-                    <div class="grid grid-cols-3 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                       <button
                         type="button"
                         onclick="setResFrequency('onetime')"
                         id="freqBtnOnetime"
-                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                        class="p-2.5 sm:p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
                       >
                         <div>One-Time</div>
                         <div class="text-[10px] text-slate-400 font-normal">Standard Base</div>
@@ -946,7 +950,7 @@
                         type="button"
                         onclick="setResFrequency('biweekly')"
                         id="freqBtnBiweekly"
-                        class="p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all"
+                        class="p-2.5 sm:p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all"
                       >
                         <div>Bi-Weekly</div>
                         <div class="text-[10px] text-brand-green font-extrabold">Save 15% (Popular)</div>
@@ -956,7 +960,7 @@
                         type="button"
                         onclick="setResFrequency('monthly')"
                         id="freqBtnMonthly"
-                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                        class="p-2.5 sm:p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
                       >
                         <div>Monthly</div>
                         <div class="text-[10px] text-brand-green font-extrabold">Save 10%</div>
@@ -975,28 +979,28 @@
                           <input type="checkbox" id="addonOven" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
                           <span class="font-medium text-slate-800">Inside Oven & Range Hood</span>
                         </span>
-                        <span class="font-bold text-navy-900">+$65</span>
+                        <span class="font-bold text-navy-900 shrink-0">+$65</span>
                       </label>
                       <label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-50 border border-slate-200 cursor-pointer hover:border-slate-300">
                         <span class="flex items-center gap-2">
                           <input type="checkbox" id="addonFridge" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
                           <span class="font-medium text-slate-800">Refrigerator Sanitization</span>
                         </span>
-                        <span class="font-bold text-navy-900">+$55</span>
+                        <span class="font-bold text-navy-900 shrink-0">+$55</span>
                       </label>
                       <label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-50 border border-slate-200 cursor-pointer hover:border-slate-300">
                         <span class="flex items-center gap-2">
                           <input type="checkbox" id="addonWindows" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
                           <span class="font-medium text-slate-800">Interior Windows & Tracks</span>
                         </span>
-                        <span class="font-bold text-navy-900">+$85</span>
+                        <span class="font-bold text-navy-900 shrink-0">+$85</span>
                       </label>
                       <label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-50 border border-slate-200 cursor-pointer hover:border-slate-300">
                         <span class="flex items-center gap-2">
                           <input type="checkbox" id="addonCabinets" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
                           <span class="font-medium text-slate-800">Inside Cabinets & Drawers</span>
                         </span>
-                        <span class="font-bold text-navy-900">+$75</span>
+                        <span class="font-bold text-navy-900 shrink-0">+$75</span>
                       </label>
                     </div>
                   </div>
@@ -1004,10 +1008,10 @@
                 </div>
 
                 <!-- COMMERCIAL CONTROLS -->
-                <div id="commercialControls" class="hidden space-y-6">
+                <div id="commercialControls" class="hidden space-y-6 w-full">
                   
-                  <div class="bg-surface-50 p-5 rounded-xl border border-slate-200">
-                    <div class="flex items-center justify-between mb-2">
+                  <div class="bg-surface-50 p-4 sm:p-5 rounded-xl border border-slate-200 w-full">
+                    <div class="flex items-center justify-between mb-2 flex-wrap gap-1">
                       <label for="commSqftSlider" class="text-xs font-extrabold uppercase tracking-wider text-slate-800">
                         Commercial Facility Size
                       </label>
@@ -1026,11 +1030,11 @@
                       class="w-full h-2 cursor-pointer mt-2"
                     />
 
-                    <div class="flex flex-wrap gap-2 mt-3">
-                      <button type="button" onclick="setCommSqft(2500)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">2,500 sq.ft</button>
-                      <button type="button" onclick="setCommSqft(6500)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">6,500 sq.ft</button>
-                      <button type="button" onclick="setCommSqft(12000)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">12,000 sq.ft</button>
-                      <button type="button" onclick="setCommSqft(20000)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">20,000+ sq.ft</button>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-3">
+                      <button type="button" onclick="setCommSqft(2500)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">2,500 sq.ft</button>
+                      <button type="button" onclick="setCommSqft(6500)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">6,500 sq.ft</button>
+                      <button type="button" onclick="setCommSqft(12000)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">12,000 sq.ft</button>
+                      <button type="button" onclick="setCommSqft(20000)" class="px-2 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">20,000+ sq.ft</button>
                     </div>
                   </div>
 
@@ -1039,12 +1043,12 @@
                     <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-800 mb-2">
                       Weekly Janitorial Cadence
                     </label>
-                    <div class="grid grid-cols-3 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                       <button
                         type="button"
                         onclick="setCommFrequency('3x')"
                         id="commFreqBtn3x"
-                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                        class="p-2.5 sm:p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
                       >
                         <div>3x / Week</div>
                         <div class="text-[10px] text-slate-400 font-normal">Mon/Wed/Fri</div>
@@ -1054,7 +1058,7 @@
                         type="button"
                         onclick="setCommFrequency('5x')"
                         id="commFreqBtn5x"
-                        class="p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all"
+                        class="p-2.5 sm:p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all"
                       >
                         <div>5x / Week</div>
                         <div class="text-[10px] text-brand-blue font-extrabold">Mon – Fri (Standard)</div>
@@ -1064,7 +1068,7 @@
                         type="button"
                         onclick="setCommFrequency('7x')"
                         id="commFreqBtn7x"
-                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                        class="p-2.5 sm:p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
                       >
                         <div>7x / Week</div>
                         <div class="text-[10px] text-slate-400 font-normal">24/7 Coverage</div>
@@ -1076,27 +1080,27 @@
 
               </div>
 
-              <!-- Right Price Display Card (Solid Deep Navy, Crisp White & Green Accents) -->
-              <div class="lg:col-span-5 bg-navy-900 text-white rounded-xl p-6 sm:p-7 space-y-6 shadow-md">
+              <!-- Right Price Display Card -->
+              <div class="lg:col-span-5 bg-navy-900 text-white rounded-xl p-5 sm:p-7 space-y-5 sm:space-y-6 shadow-md w-full">
                 
                 <div class="border-b border-navy-800 pb-4">
                   <div class="text-xs font-mono text-blue-300 uppercase tracking-widest">Locked Estimate</div>
                   <div id="summaryModeLabel" class="text-lg font-bold text-white mt-1">Residential Service Estimate</div>
-                  <div id="summarySubLabel" class="text-xs text-slate-300 font-mono mt-1">1,800 sq.ft · Bi-Weekly Cadence</div>
+                  <div id="summarySubLabel" class="text-xs text-slate-300 font-mono mt-1 break-words">1,800 sq.ft · Bi-Weekly Cadence</div>
                 </div>
 
                 <!-- Price Box -->
-                <div class="bg-navy-950 rounded-lg p-5 border border-navy-800">
+                <div class="bg-navy-950 rounded-lg p-4 sm:p-5 border border-navy-800">
                   <div class="text-xs text-slate-300 uppercase tracking-wider font-semibold">Estimated Investment:</div>
-                  <div class="flex items-baseline gap-2 mt-1">
-                    <span id="priceRangeDisplay" class="text-3xl sm:text-4xl font-black font-mono text-white tabular-nums">
+                  <div class="flex items-baseline gap-2 mt-1 flex-wrap">
+                    <span id="priceRangeDisplay" class="text-2xl sm:text-4xl font-black font-mono text-white tabular-nums">
                       $275 – $320
                     </span>
                     <span id="pricePeriodDisplay" class="text-xs font-bold text-slate-300">/ visit</span>
                   </div>
                   
                   <div id="discountNote" class="text-xs text-brand-green font-semibold mt-2 flex items-center gap-1.5">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
                     <span>Includes 15% bi-weekly client savings</span>
                   </div>
                 </div>
@@ -1142,15 +1146,15 @@
       </section>
 
       <!-- Section 5: Verified Client Reviews -->
-      <section id="reviews" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+      <section id="reviews" class="py-14 sm:py-20 bg-white border-b border-slate-200 w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200 mb-3">
               <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
               Social Proof & Audit Logs
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-navy-900">
               Validated by Penthouses & Enterprises
             </h2>
             <p class="text-sm sm:text-base text-slate-600 mt-2">
@@ -1159,9 +1163,9 @@
           </div>
 
           <!-- Reviews Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             
-            <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
+            <div class="rounded-xl bg-surface-50 border border-slate-200 p-5 sm:p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
               <div>
                 <div class="flex items-center gap-1 text-amber-500 mb-3">
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
@@ -1181,7 +1185,7 @@
               </div>
             </div>
 
-            <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
+            <div class="rounded-xl bg-surface-50 border border-slate-200 p-5 sm:p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
               <div>
                 <div class="flex items-center gap-1 text-amber-500 mb-3">
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
@@ -1201,7 +1205,7 @@
               </div>
             </div>
 
-            <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
+            <div class="rounded-xl bg-surface-50 border border-slate-200 p-5 sm:p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
               <div>
                 <div class="flex items-center gap-1 text-amber-500 mb-3">
                   <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
@@ -1227,15 +1231,15 @@
       </section>
 
       <!-- Section 6: Frequently Asked Questions (FAQ) Accordion -->
-      <section id="faq" class="py-16 lg:py-24 bg-surface-50 border-b border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="faq" class="py-14 sm:py-20 bg-surface-50 border-b border-slate-200 w-full overflow-hidden">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
               <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
               Pre-Purchase Clarifications
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-navy-900">
               Frequently Asked Questions
             </h2>
             <p class="text-sm sm:text-base text-slate-600 mt-2">
@@ -1244,24 +1248,24 @@
           </div>
 
           <!-- Accordion Container -->
-          <div class="space-y-3.5" id="faqAccordion">
+          <div class="space-y-3" id="faqAccordion">
             
             <!-- Item 1: Insurance -->
             <div class="faq-item rounded-lg bg-white border border-slate-200 overflow-hidden shadow-sm transition-all duration-200">
               <button
                 type="button"
                 onclick="toggleFaq(0)"
-                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+                class="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 font-bold text-navy-900 hover:text-brand-blue transition-colors"
               >
                 <div class="flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
                     <i data-lucide="shield-check" class="w-4 h-4"></i>
                   </div>
-                  <span class="text-sm sm:text-base">How are your team members insured and bonded?</span>
+                  <span class="text-xs sm:text-sm font-bold">How are your team members insured and bonded?</span>
                 </div>
-                <i data-lucide="chevron-down" id="faqIcon0" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+                <i data-lucide="chevron-down" id="faqIcon0" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
               </button>
-              <div id="faqAnswer0" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              <div id="faqAnswer0" class="hidden px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
                 ShineCNDA carries an industry-leading <strong>$5,000,000 comprehensive general liability and umbrella insurance policy</strong>, alongside full surety bonding (Policy #SC-98214-US). Every property, antique fixture, marble installation, and high-value electronic asset is fully protected under our coverage. A Certificate of Insurance (COI) naming your property management or HOA as an additional insured can be issued within 2 hours of booking.
               </div>
             </div>
@@ -1271,17 +1275,17 @@
               <button
                 type="button"
                 onclick="toggleFaq(1)"
-                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+                class="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 font-bold text-navy-900 hover:text-brand-blue transition-colors"
               >
                 <div class="flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
                     <i data-lucide="user-check" class="w-4 h-4"></i>
                   </div>
-                  <span class="text-sm sm:text-base">How do you vet and hire cleaning specialists?</span>
+                  <span class="text-xs sm:text-sm font-bold">How do you vet and hire cleaning specialists?</span>
                 </div>
-                <i data-lucide="chevron-down" id="faqIcon1" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+                <i data-lucide="chevron-down" id="faqIcon1" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
               </button>
-              <div id="faqAnswer1" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              <div id="faqAnswer1" class="hidden px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
                 <strong>We never use sub-contractors or gig-workers.</strong> 100% of ShineCNDA technicians are directly employed W-2 specialists who pass a multi-tier vetting process: 7-year federal & state criminal background checks, motor vehicle records, 10-panel drug screenings, and in-person luxury surface care certification. We assign the exact same dedicated 2-technician team to your recurring visits so they become familiar with your specific space and preferences.
               </div>
             </div>
@@ -1291,17 +1295,17 @@
               <button
                 type="button"
                 onclick="toggleFaq(2)"
-                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+                class="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 font-bold text-navy-900 hover:text-brand-blue transition-colors"
               >
                 <div class="flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
                     <i data-lucide="calendar" class="w-4 h-4"></i>
                   </div>
-                  <span class="text-sm sm:text-base">How does scheduling, access, and key release work?</span>
+                  <span class="text-xs sm:text-sm font-bold">How does scheduling, access, and key release work?</span>
                 </div>
-                <i data-lucide="chevron-down" id="faqIcon2" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+                <i data-lucide="chevron-down" id="faqIcon2" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
               </button>
-              <div id="faqAnswer2" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              <div id="faqAnswer2" class="hidden px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
                 You never need to be home or on-site during cleaning. We accommodate all entry preferences: front desk / concierge key release, encrypted lockboxes, smart-lock one-time codes, or commercial security keycards. All access codes and keys are logged into our military-grade encrypted dispatch software. You can reschedule any visit with 24 hours advance notice without penalty.
               </div>
             </div>
@@ -1311,17 +1315,17 @@
               <button
                 type="button"
                 onclick="toggleFaq(3)"
-                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+                class="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 font-bold text-navy-900 hover:text-brand-blue transition-colors"
               >
                 <div class="flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
                     <i data-lucide="award" class="w-4 h-4"></i>
                   </div>
-                  <span class="text-sm sm:text-base">What is the ShineCNDA 24-Hour Guarantee?</span>
+                  <span class="text-xs sm:text-sm font-bold">What is the ShineCNDA 24-Hour Guarantee?</span>
                 </div>
-                <i data-lucide="chevron-down" id="faqIcon3" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+                <i data-lucide="chevron-down" id="faqIcon3" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
               </button>
-              <div id="faqAnswer3" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              <div id="faqAnswer3" class="hidden px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
                 Perfection is contractual. If any surface, baseboard, glass partition, or floor falls short of pristine condition, simply inform us within 24 hours. Our quality assurance supervisor returns with our crew to reclean the affected area <strong>completely free of charge</strong>. No hassle, no debates.
               </div>
             </div>
@@ -1331,17 +1335,17 @@
               <button
                 type="button"
                 onclick="toggleFaq(4)"
-                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+                class="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 font-bold text-navy-900 hover:text-brand-blue transition-colors"
               >
                 <div class="flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
                     <i data-lucide="leaf" class="w-4 h-4"></i>
                   </div>
-                  <span class="text-sm sm:text-base">Do you provide all cleaning supplies, and are they pet-safe?</span>
+                  <span class="text-xs sm:text-sm font-bold">Do you provide all cleaning supplies, and are they pet-safe?</span>
                 </div>
-                <i data-lucide="chevron-down" id="faqIcon4" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+                <i data-lucide="chevron-down" id="faqIcon4" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
               </button>
-              <div id="faqAnswer4" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              <div id="faqAnswer4" class="hidden px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
                 Yes. Our mobile units arrive fully stocked with commercial-grade HEPA-filtered extraction vacuums (capturing 99.97% of dust and allergens down to 0.3 microns), fresh color-coded microfiber cloths, and certified non-toxic, pet-safe, plant-derived botanical cleaners (EPA Safer Choice certified). For fine marble and untreated hardwoods, we utilize specialized pH-neutral preservation formulas.
               </div>
             </div>
@@ -1351,32 +1355,32 @@
         </div>
       </section>
 
-      <!-- Section 7: Guarantee Callout Banner (Clean Solid Navy) -->
-      <section class="py-14 bg-navy-900 text-white">
+      <!-- Section 7: Guarantee Callout Banner -->
+      <section class="py-12 sm:py-14 bg-navy-900 text-white w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
             <div class="space-y-2 text-center lg:text-left">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-navy-800 text-emerald-400 text-xs font-bold font-mono">
                 <i data-lucide="shield-check" class="w-4 h-4"></i>
                 100% UNCONDITIONAL COMMITMENT
               </div>
-              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">The ShineCNDA 24-Hour Reclean Guarantee</h3>
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight">The ShineCNDA 24-Hour Reclean Guarantee</h3>
               <p class="text-slate-300 text-xs sm:text-sm max-w-xl">
                 If anything falls short of immaculate, our team recleans it within 24 hours at no extra charge. We take full accountability for your peace of mind.
               </p>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+            <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full sm:w-auto">
               <button
                 type="button"
                 onclick="openProposalModal()"
-                class="px-8 py-3.5 rounded-lg text-xs font-extrabold uppercase tracking-wider bg-brand-blue hover:bg-brand-blueHover text-white shadow-sm transition-colors"
+                class="px-6 sm:px-8 py-3.5 rounded-lg text-xs font-extrabold uppercase tracking-wider bg-brand-blue hover:bg-brand-blueHover text-white shadow-sm transition-colors text-center"
               >
                 Schedule Site Walkthrough
               </button>
               <a
                 href="tel:+18005557446"
-                class="px-7 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white border border-slate-700 hover:bg-navy-800 transition-colors text-center"
+                class="px-6 sm:px-7 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white border border-slate-700 hover:bg-navy-800 transition-colors text-center"
               >
                 Call Concierge
               </a>
@@ -1386,16 +1390,16 @@
       </section>
     </main>
 
-    <!-- Footer with Official Inline SVG Social Media Logos -->
-    <footer class="bg-surface-900 text-slate-400 border-t border-slate-800 pt-16 pb-12 text-xs">
+    <!-- Footer with Official Inline SVG Social Media Logos (100% Responsive Grid) -->
+    <footer class="bg-surface-900 text-slate-400 border-t border-slate-800 pt-14 pb-10 text-xs w-full overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 pb-10 border-b border-slate-800">
           
           <!-- Brand Column -->
-          <div class="lg:col-span-2 space-y-4">
+          <div class="sm:col-span-2 space-y-4">
             <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-lg bg-navy-800 flex items-center justify-center text-white">
+              <div class="w-8 h-8 rounded-lg bg-navy-800 flex items-center justify-center text-white shrink-0">
                 <i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i>
               </div>
               <span class="text-lg font-extrabold tracking-tight text-white">
@@ -1403,14 +1407,14 @@
               </span>
             </div>
 
-            <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            <p class="text-slate-400 text-xs leading-relaxed max-w-sm break-words">
               Architectural-grade residential and commercial cleaning services. Setting the standard for predictable perfection across high-value residences and corporate spaces.
             </p>
 
             <!-- Social Media Profiles: Official Inline Vector Logos -->
             <div class="pt-2">
               <div class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-3">Connect With Us</div>
-              <div class="flex items-center gap-3">
+              <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
                 
                 <!-- Instagram (Official Vector SVG) -->
                 <a
@@ -1419,9 +1423,9 @@
                   rel="noopener noreferrer"
                   aria-label="Follow ShineCNDA on Instagram"
                   title="Instagram"
-                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                  class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-800 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700 shrink-0"
                 >
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
@@ -1433,9 +1437,9 @@
                   rel="noopener noreferrer"
                   aria-label="Connect with ShineCNDA on LinkedIn"
                   title="LinkedIn"
-                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                  class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700 shrink-0"
                 >
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </a>
@@ -1447,9 +1451,9 @@
                   rel="noopener noreferrer"
                   aria-label="Follow ShineCNDA on Facebook"
                   title="Facebook"
-                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-blue-700 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                  class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-800 hover:bg-blue-700 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700 shrink-0"
                 >
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
                   </svg>
                 </a>
@@ -1461,9 +1465,9 @@
                   rel="noopener noreferrer"
                   aria-label="Follow ShineCNDA on X"
                   title="X (Twitter)"
-                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                  class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700 shrink-0"
                 >
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
                 </a>
@@ -1475,9 +1479,9 @@
                   rel="noopener noreferrer"
                   aria-label="Subscribe to ShineCNDA on YouTube"
                   title="YouTube"
-                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                  class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700 shrink-0"
                 >
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
@@ -1524,7 +1528,7 @@
               </div>
               <div>
                 <div class="text-[10px] text-slate-500 uppercase font-mono">Operations Dispatch</div>
-                <a href="mailto:concierge@shinecnda.com" class="hover:text-white">concierge@shinecnda.com</a>
+                <a href="mailto:concierge@shinecnda.com" class="hover:text-white break-all">concierge@shinecnda.com</a>
               </div>
               <div>
                 <div class="text-[10px] text-slate-500 uppercase font-mono">Headquarters</div>
@@ -1535,10 +1539,10 @@
 
         </div>
 
-        <!-- Bottom Copyright -->
-        <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-          <div>© 2026 ShineCNDA. All rights reserved. Registered Bonded Cleaning Corporation.</div>
-          <div class="flex items-center gap-4">
+        <!-- Bottom Copyright (Wrapped & Responsive, Zero Overflow) -->
+        <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] text-slate-500 text-center md:text-left">
+          <div class="break-words max-w-full">© 2026 ShineCNDA. All rights reserved. Registered Bonded Cleaning Corporation.</div>
+          <div class="flex flex-wrap items-center justify-center gap-3">
             <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
             <span>·</span>
             <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
@@ -1558,7 +1562,7 @@
       aria-modal="true"
       aria-labelledby="modalTitle"
     >
-      <div class="bg-white rounded-xl border border-slate-200 max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+      <div class="bg-white rounded-xl border border-slate-200 max-w-lg w-full p-5 sm:p-8 relative shadow-2xl">
         
         <button
           type="button"
@@ -1723,7 +1727,7 @@
         commSqft: 6500,
         commFreq: '5x',
         sliderSpaceIndex: 0,
-        sliderPosition: 50 // Centered exactly at 50%
+        sliderPosition: 50 // Centered at 50%
       };
 
       // Real Domain Spaces
@@ -1796,12 +1800,10 @@
 
         calculateTotal();
         selectSpace(0);
-        // Explicitly set slider right in the middle (50%) on load
         setSliderPosition(50);
       });
 
       // Flawless Before/After Slider Engine using CSS clip-path inset
-      // Both images remain 100% stationary and full-size! Only the cut line moves.
       function initSlider() {
         const container = document.getElementById('sliderContainer');
         if (!container) return;
@@ -1845,8 +1847,6 @@
         const sliderHandle = document.getElementById('sliderHandle');
         const percentText = document.getElementById('sliderPercentText');
 
-        // Using clip-path inset(top right bottom left)
-        // To reveal from left to right: clip from right side by (100 - percent)%
         if (beforeLayer) {
           const rightInset = 100 - percent;
           beforeLayer.style.clipPath = `inset(0 ${rightInset}% 0 0)`;
@@ -1866,9 +1866,9 @@
 
         document.querySelectorAll('.space-btn').forEach((btn, i) => {
           if (i === idx) {
-            btn.className = 'space-btn px-4 py-2 rounded-md text-xs font-bold transition-all bg-navy-900 text-white shadow-sm';
+            btn.className = 'space-btn w-full sm:w-auto px-3.5 py-2 rounded-lg text-xs font-bold transition-all bg-navy-900 text-white shadow-sm border border-navy-900';
           } else {
-            btn.className = 'space-btn px-4 py-2 rounded-md text-xs font-bold transition-all text-slate-600 hover:text-slate-900';
+            btn.className = 'space-btn w-full sm:w-auto px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-slate-700 bg-white hover:text-slate-900 border border-slate-200';
           }
         });
 
@@ -1882,7 +1882,6 @@
         document.getElementById('spaceScope').textContent = s.scope;
         document.getElementById('spaceMetric').textContent = s.metric;
 
-        // Keep slider centered right in the middle
         setSliderPosition(50);
         if (window.lucide) window.lucide.createIcons();
       }
@@ -1898,15 +1897,15 @@
         const ctaBtnText = document.getElementById('ctaBtnText');
 
         if (mode === 'residential') {
-          tabRes.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all';
-          tabComm.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all';
+          tabRes.className = 'w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all text-center';
+          tabComm.className = 'w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all text-center';
           resControls.classList.remove('hidden');
           commControls.classList.add('hidden');
           summaryModeLabel.textContent = 'Residential Service Estimate';
           ctaBtnText.textContent = 'Lock In This Estimate';
         } else {
-          tabComm.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all';
-          tabRes.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all';
+          tabComm.className = 'w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all text-center';
+          tabRes.className = 'w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all text-center';
           commControls.classList.remove('hidden');
           resControls.classList.add('hidden');
           summaryModeLabel.textContent = 'Commercial Facility Proposal';
@@ -1947,15 +1946,15 @@
         const bMon = document.getElementById('freqBtnMonthly');
 
         [bOne, bBi, bMon].forEach(b => {
-          b.className = 'p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors';
+          b.className = 'p-2.5 sm:p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors';
         });
 
         if (freq === 'biweekly') {
-          bBi.className = 'p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
+          bBi.className = 'p-2.5 sm:p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
         } else if (freq === 'monthly') {
-          bMon.className = 'p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
+          bMon.className = 'p-2.5 sm:p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
         } else {
-          bOne.className = 'p-3 text-center rounded-lg border-2 border-navy-900 bg-navy-900 text-white text-xs font-bold transition-all';
+          bOne.className = 'p-2.5 sm:p-3 text-center rounded-lg border-2 border-navy-900 bg-navy-900 text-white text-xs font-bold transition-all';
         }
         calculateTotal();
       }
@@ -1967,15 +1966,15 @@
         const b7 = document.getElementById('commFreqBtn7x');
 
         [b3, b5, b7].forEach(b => {
-          b.className = 'p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors';
+          b.className = 'p-2.5 sm:p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors';
         });
 
         if (freq === '5x') {
-          b5.className = 'p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
+          b5.className = 'p-2.5 sm:p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
         } else if (freq === '7x') {
-          b7.className = 'p-3 text-center rounded-lg border-2 border-navy-900 bg-navy-900 text-white text-xs font-bold transition-all';
+          b7.className = 'p-2.5 sm:p-3 text-center rounded-lg border-2 border-navy-900 bg-navy-900 text-white text-xs font-bold transition-all';
         } else {
-          b3.className = 'p-3 text-center rounded-lg border-2 border-slate-900 bg-slate-900 text-white text-xs font-bold transition-all';
+          b3.className = 'p-2.5 sm:p-3 text-center rounded-lg border-2 border-slate-900 bg-slate-900 text-white text-xs font-bold transition-all';
         }
         calculateTotal();
       }
@@ -2022,7 +2021,7 @@
           if (discountPct > 0) {
             discountNote.classList.remove('hidden');
             discountNote.innerHTML = `
-              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
               <span>Includes ${Math.round(discountPct * 100)}% recurring client discount</span>
             `;
             breakdownFreqRow.classList.remove('hidden');
@@ -2054,7 +2053,7 @@
 
           discountNote.classList.remove('hidden');
           discountNote.innerHTML = `
-            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
             <span>Includes supervisor daily audits & $5M insurance</span>
           `;
 
@@ -2088,7 +2087,6 @@
 
         const isHidden = answer.classList.contains('hidden');
 
-        // Close others
         for (let i = 0; i < 5; i++) {
           const a = document.getElementById(`faqAnswer${i}`);
           const ic = document.getElementById(`faqIcon${i}`);
