@@ -1,0 +1,2172 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShineCNDA — Professional Residential & Commercial Cleaning Services</title>
+    <meta
+      name="description"
+      content="Flawless spaces. Predictable perfection for luxury homes and corporate facilities. $5M bonded and insured, eco-certified, and backed by our 24-hour guarantee."
+    />
+    <meta property="og:title" content="ShineCNDA — Premium Cleaning Services" />
+    <meta
+      property="og:description"
+      content="Predictable perfection for residential and commercial properties. Interactive quote estimator, vetted specialists, 24-hour guarantee."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+            colors: {
+              navy: {
+                950: '#07162C',
+                900: '#0A2540',
+                800: '#0F3057',
+                700: '#154178',
+              },
+              brand: {
+                blue: '#1D4ED8',      // Precision Royal Blue
+                blueHover: '#1E40AF',
+                blueLight: '#EFF6FF',
+                green: '#059669',     // Pure Emerald Green (for Trust & Eco)
+                greenLight: '#ECFDF5',
+              },
+              surface: {
+                50: '#F8FAFC',
+                100: '#F1F5F9',
+                200: '#E2E8F0',
+                800: '#0F172A',
+                900: '#070D18',
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      /* Professional Slider Styling */
+      input[type=range] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        height: 6px;
+        background: #E2E8F0;
+        border-radius: 9999px;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: -7px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: #1D4ED8;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        cursor: pointer;
+        transition: transform 0.15s ease, background-color 0.15s ease;
+      }
+      input[type=range]::-webkit-slider-thumb:hover {
+        transform: scale(1.15);
+        background: #0A2540;
+      }
+      input[type=range]::-moz-range-track {
+        height: 6px;
+        background: #E2E8F0;
+        border-radius: 9999px;
+      }
+      input[type=range]::-moz-range-thumb {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: #1D4ED8;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        cursor: pointer;
+      }
+
+      /* Clean Dust & Smudge Texture Filter for the Before Clean Layer */
+      .dust-matte-filter {
+        filter: contrast(80%) brightness(78%) saturate(60%) blur(0.6px);
+      }
+      .dust-overlay {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 35% 45%, rgba(135, 125, 110, 0.4) 0%, rgba(100, 90, 75, 0.25) 75%),
+                    repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 6px);
+        pointer-events: none;
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 selection:bg-brand-blue selection:text-white">
+
+    <!-- Top Announcement Bar: Clean, Authoritative Solid Navy -->
+    <div class="bg-navy-900 text-white text-[12px] font-medium py-2 px-4 border-b border-navy-800">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-brand-green text-white">
+            <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+          </span>
+          <span><strong>Spring Scheduling:</strong> 15% recurring savings on bi-weekly residential and commercial contracts</span>
+        </div>
+        <div class="hidden sm:flex items-center gap-4 text-slate-300">
+          <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-green"></i> $5,000,000 Bonded & Insured</span>
+          <span>·</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-3.5 h-3.5 text-brand-green"></i> 24-Hour Clean Guarantee</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-6">
+        
+        <!-- Brand Wordmark -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-navy-900 flex items-center justify-center text-white font-bold text-sm shadow-sm">
+            <i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-navy-900 leading-tight">
+              Shine<span class="text-brand-blue">CNDA</span>
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Architectural Cleaning</span>
+          </div>
+        </a>
+
+        <!-- Clean Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <a href="#results" class="hover:text-brand-blue transition-colors">Before & After</a>
+          <a href="#services" class="hover:text-brand-blue transition-colors">Services</a>
+          <a href="#estimator" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
+            <span>Instant Estimator</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-brand-blue border border-blue-200">Live</span>
+          </a>
+          <a href="#reviews" class="hover:text-brand-blue transition-colors">Reviews</a>
+          <a href="#faq" class="hover:text-brand-blue transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right Action Zone -->
+        <div class="flex items-center gap-4">
+          <a
+            href="tel:+18005557446"
+            class="hidden lg:flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-brand-blue transition-colors py-2 px-3 rounded-lg border border-slate-200 hover:border-slate-300"
+          >
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-blue"></i>
+            <span>(800) 555-7446</span>
+          </a>
+
+          <a
+            href="#estimator"
+            class="px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm transition-all duration-150 whitespace-nowrap"
+          >
+            Get Estimate
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Toggle Navigation Menu"
+            aria-expanded="false"
+            class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none"
+          >
+            <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-b border-slate-200 bg-white px-5 pt-3 pb-6 shadow-xl"
+      >
+        <div class="flex flex-col space-y-3 text-sm font-semibold text-slate-800">
+          <a href="#results" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-blue flex items-center justify-between">
+            <span>Before & After Transformation</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#services" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-blue flex items-center justify-between">
+            <span>Services (Home & Office)</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#estimator" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-blue flex items-center justify-between">
+            <span>Live Price Calculator</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-brand-blue">Live</span>
+          </a>
+          <a href="#reviews" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-blue flex items-center justify-between">
+            <span>Verified Reviews</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="#faq" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-blue flex items-center justify-between">
+            <span>Frequently Asked Questions</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          
+          <div class="pt-3 flex flex-col gap-2">
+            <a
+              href="tel:+18005557446"
+              class="w-full text-center py-2.5 rounded-lg text-xs font-bold text-slate-900 bg-surface-50 border border-slate-300 flex items-center justify-center gap-2"
+            >
+              <i data-lucide="phone" class="w-4 h-4 text-brand-blue"></i>
+              <span>Call Concierge: (800) 555-7446</span>
+            </a>
+            <button
+              onclick="openProposalModal()"
+              class="w-full py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm"
+            >
+              Book Site Walkthrough
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section: Clean, Crisp, Professional Luxury -->
+      <section class="relative bg-white pt-12 pb-18 lg:pt-20 lg:pb-24 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Hero Content -->
+            <div class="lg:col-span-7 space-y-6">
+              
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-greenLight border border-emerald-200 text-xs font-bold text-brand-green">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                <span>Bonded Luxury Residential & Commercial Facility Care</span>
+              </div>
+
+              <!-- High-Clarity Headline -->
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-navy-900 leading-[1.15]">
+                Flawless spaces. <br />
+                <span class="text-brand-blue">Predictable perfection</span> every single visit.
+              </h1>
+
+              <!-- Subheading -->
+              <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
+                Bespoke cleaning delivered by rigorously background-checked, W-2 certified specialists. Backed by <strong class="text-slate-900 font-semibold">$5,000,000 comprehensive insurance</strong> and our unconditional <strong class="text-slate-900 font-semibold">24-hour reclean guarantee</strong>.
+              </p>
+
+              <!-- Dual CTAs -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <a
+                  href="#estimator"
+                  class="inline-flex justify-center items-center gap-2 px-7 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm transition-colors"
+                >
+                  <i data-lucide="calculator" class="w-4 h-4"></i>
+                  <span>Calculate Live Estimate</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+                
+                <a
+                  href="#results"
+                  class="inline-flex justify-center items-center gap-2 px-7 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-800 bg-surface-50 hover:bg-slate-100 border border-slate-300 transition-colors"
+                >
+                  <i data-lucide="sparkles" class="w-4 h-4 text-brand-blue"></i>
+                  <span>View Before & After Proof</span>
+                </a>
+              </div>
+
+              <!-- 4 Bullet Guarantees -->
+              <div class="pt-3 grid grid-cols-2 gap-3 text-xs font-semibold text-slate-700">
+                <div class="flex items-center gap-2">
+                  <div class="w-4 h-4 rounded-full bg-brand-greenLight flex items-center justify-center text-brand-green shrink-0">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span>100% Zero-Residue Standard</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-4 h-4 rounded-full bg-brand-greenLight flex items-center justify-center text-brand-green shrink-0">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span>$5,000,000 Bonded Insurance</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-4 h-4 rounded-full bg-brand-greenLight flex items-center justify-center text-brand-green shrink-0">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span>EPA Safe Non-Toxic Solutions</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-4 h-4 rounded-full bg-brand-greenLight flex items-center justify-center text-brand-green shrink-0">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span>24-Hour Free Reclean Promise</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Hero Card -->
+            <div class="lg:col-span-5">
+              <div class="relative rounded-2xl bg-surface-50 border border-slate-200 p-3 shadow-md">
+                
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-900">
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+                    alt="Immaculate modern penthouse interior clean"
+                    class="w-full h-full object-cover"
+                    referrerpolicy="no-referrer"
+                  />
+                  
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+
+                  <!-- Audit Score Tag -->
+                  <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md rounded-md py-1 px-2.5 border border-slate-200 text-xs font-bold text-slate-900 flex items-center gap-1.5 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+                    <span>99.8% Supervisor Audit Score</span>
+                  </div>
+
+                  <!-- Eco Tag -->
+                  <div class="absolute top-3 right-3 bg-navy-900/90 text-white rounded-md py-1 px-2.5 text-xs font-semibold flex items-center gap-1.5">
+                    <i data-lucide="leaf" class="w-3 h-3 text-emerald-400"></i>
+                    <span>HEPA Micro-Clean</span>
+                  </div>
+
+                  <!-- Bottom Caption -->
+                  <div class="absolute bottom-4 left-4 right-4 text-white">
+                    <div class="text-[11px] font-mono text-slate-300 uppercase tracking-wider">Tribeca Sky Penthouse · 3,400 sq.ft</div>
+                    <div class="text-base font-bold mt-0.5">Calacatta Marble & Hardwood Handover</div>
+                    <div class="flex items-center justify-between text-xs text-slate-300 mt-2 pt-2 border-t border-white/20">
+                      <span>Particulate Level: &lt;5 µg/m³</span>
+                      <span class="text-brand-green font-bold">100% Zero-Residue Approved</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Instant Stat Strip -->
+                <div class="mt-3 grid grid-cols-3 gap-2 text-center text-xs py-2 bg-white rounded-lg border border-slate-200">
+                  <div>
+                    <div class="font-extrabold text-slate-900 text-sm">4.9★</div>
+                    <div class="text-[10px] text-slate-500 font-medium">Google Rating</div>
+                  </div>
+                  <div class="border-x border-slate-200">
+                    <div class="font-extrabold text-brand-green text-sm">$5M</div>
+                    <div class="text-[10px] text-slate-500 font-medium">Bonded Policy</div>
+                  </div>
+                  <div>
+                    <div class="font-extrabold text-brand-blue text-sm">24h</div>
+                    <div class="text-[10px] text-slate-500 font-medium">Reclean Guarantee</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Trust Badges Strip -->
+        <div class="mt-14 border-t border-slate-200 bg-surface-50">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-xs text-slate-700">
+              
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-500 shrink-0">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900">4.9★ Google Rating</div>
+                  <div class="text-slate-500 text-[11px]">380+ Verified Client Audits</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-brand-blue shrink-0">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900">$5,000,000 Insured</div>
+                  <div class="text-slate-500 text-[11px]">Fully Bonded & Certified</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-brand-green shrink-0">
+                  <i data-lucide="leaf" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900">Eco-Certified Solutions</div>
+                  <div class="text-slate-500 text-[11px]">EPA Safe, Non-Toxic, HEPA</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shrink-0">
+                  <i data-lucide="users" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900">100% W-2 Vetted Staff</div>
+                  <div class="text-slate-500 text-[11px]">Federal Background Checks</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Interactive Before & After Visual Proof (EXACT MATCH TO REFERENCE SCREENSHOT) -->
+      <section id="results" class="py-16 lg:py-24 bg-surface-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Heading -->
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              Visual Transformation Proof
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+              Interactive Before & After Clean
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2">
+              Drag the center slider left and right to inspect the exact same space — wiping away fine post-construction dust and smudges to reveal the pristine, gleaming finish.
+            </p>
+          </div>
+
+          <!-- Room Scene Selector Tabs -->
+          <div class="flex justify-center mb-8">
+            <div class="inline-flex p-1 rounded-lg bg-white border border-slate-200 shadow-sm">
+              <button
+                type="button"
+                onclick="selectSpace(0)"
+                id="spaceBtn0"
+                class="space-btn px-4 py-2 rounded-md text-xs font-bold transition-all bg-navy-900 text-white shadow-sm"
+              >
+                01. Luxury Chef's Kitchen Island
+              </button>
+              <button
+                type="button"
+                onclick="selectSpace(1)"
+                id="spaceBtn1"
+                class="space-btn px-4 py-2 rounded-md text-xs font-bold transition-all text-slate-600 hover:text-slate-900"
+              >
+                02. Executive Glass Boardroom
+              </button>
+              <button
+                type="button"
+                onclick="selectSpace(2)"
+                id="spaceBtn2"
+                class="space-btn px-4 py-2 rounded-md text-xs font-bold transition-all text-slate-600 hover:text-slate-900"
+              >
+                03. Penthouse Master Bathroom
+              </button>
+            </div>
+          </div>
+
+          <!-- The Comparison Viewer Container (Clean, centered at 50%, identical image reveal without jumping) -->
+          <div class="max-w-4xl mx-auto bg-white rounded-xl border border-slate-200 p-3 sm:p-4 shadow-md">
+            
+            <div class="flex items-center justify-between mb-3 px-1 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
+                <span id="spaceNameDisplay" class="font-extrabold text-navy-900 text-sm">Luxury Chef's Kitchen & Island</span>
+                <span class="text-slate-300">·</span>
+                <span id="spaceSpecDisplay" class="text-xs text-slate-500 font-mono">Calacatta Marble & Hardwood Handover</span>
+              </div>
+              <div class="text-[11px] font-mono text-slate-500">
+                Slider Position: <span id="sliderPercentText" class="font-bold text-navy-900">50%</span>
+              </div>
+            </div>
+
+            <!-- The Core Split Image Box (Matches User's Reference Screenshot) -->
+            <div
+              id="sliderContainer"
+              class="relative aspect-[16/10] sm:aspect-[16/9] w-full rounded-lg overflow-hidden select-none cursor-ew-resize border border-slate-200 bg-slate-900"
+            >
+              <!-- LAYER 1: AFTER CLEAN (Immaculate Base Layer - 100% Fixed, Zero Distortion) -->
+              <img
+                id="sliderImgBase"
+                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80"
+                alt="Immaculate clean room"
+                class="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+                referrerpolicy="no-referrer"
+              />
+
+              <!-- LAYER 2: BEFORE CLEAN (Exact Same Image with Dust & Smudge Texture, using clip-path) -->
+              <div
+                id="beforeLayer"
+                class="absolute inset-0 pointer-events-none select-none overflow-hidden"
+                style="clip-path: inset(0 50% 0 0);"
+              >
+                <img
+                  id="sliderImgBefore"
+                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80"
+                  alt="Pre-clean dusty space"
+                  class="absolute inset-0 w-full h-full object-cover dust-matte-filter pointer-events-none select-none"
+                  referrerpolicy="no-referrer"
+                />
+                <!-- Authentic Dust & Handprint Overlay Texture -->
+                <div class="dust-overlay"></div>
+              </div>
+
+              <!-- VERTICAL DIVIDER LINE + CENTERED HANDLE (Matching Screenshot Reference) -->
+              <div
+                id="sliderHandle"
+                class="absolute top-0 bottom-0 z-20 pointer-events-none flex items-center justify-center"
+                style="left: 50%; transform: translateX(-50%);"
+              >
+                <!-- Crisp White Vertical Hairline with subtle shadow -->
+                <div class="w-[2px] h-full bg-white shadow-[0_0_6px_rgba(0,0,0,0.6)]"></div>
+
+                <!-- Center Diamond/Knob Handle with Left/Right arrows ◄ ► -->
+                <div class="absolute w-8 h-8 rounded-full bg-white border border-slate-300 shadow-md flex items-center justify-center text-slate-800">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 16 12">
+                    <polygon points="5,6 1,2 1,10"></polygon>
+                    <polygon points="11,6 15,2 15,10"></polygon>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- BOTTOM-LEFT BADGE: Before Clean (Matches Screenshot) -->
+              <div class="absolute bottom-4 left-4 z-10 bg-white/95 backdrop-blur-sm text-slate-900 text-xs font-semibold px-3 py-1.5 rounded shadow-sm border border-slate-200 pointer-events-none">
+                Before Clean
+              </div>
+
+              <!-- BOTTOM-RIGHT BADGE: After Clean (Matches Screenshot) -->
+              <div class="absolute bottom-4 right-4 z-10 bg-white/95 backdrop-blur-sm text-slate-900 text-xs font-semibold px-3 py-1.5 rounded shadow-sm border border-slate-200 pointer-events-none">
+                After Clean
+              </div>
+            </div>
+
+            <!-- Slider Instruction & Range Helper -->
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-500 px-1">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="hand" class="w-3.5 h-3.5 text-brand-blue"></i>
+                <span>Click and drag left or right across the image</span>
+              </span>
+              <div class="flex items-center gap-2">
+                <button
+                  type="button"
+                  onclick="setSliderPosition(50)"
+                  class="px-2 py-0.5 text-[11px] font-semibold text-slate-700 bg-surface-50 border border-slate-200 rounded hover:bg-slate-100"
+                >
+                  Reset Center
+                </button>
+              </div>
+            </div>
+
+            <!-- Project Metric Details Strip -->
+            <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div class="bg-surface-50 p-2.5 rounded-lg border border-slate-200">
+                <div class="text-slate-400 font-mono text-[10px] uppercase">Service Scope</div>
+                <div id="spaceScope" class="font-bold text-navy-900 mt-0.5">Post-Renovation Stone Reconditioning</div>
+              </div>
+              <div class="bg-surface-50 p-2.5 rounded-lg border border-slate-200">
+                <div class="text-slate-400 font-mono text-[10px] uppercase">Particulate Extraction</div>
+                <div id="spaceMetric" class="font-bold text-brand-green mt-0.5">100% Zero-Residue Sign-Off</div>
+              </div>
+              <div class="bg-surface-50 p-2.5 rounded-lg border border-slate-200">
+                <div class="text-slate-400 font-mono text-[10px] uppercase">Assigned Team</div>
+                <div class="font-bold text-navy-900 mt-0.5">2 W-2 Specialists · 4.5 Hours</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 3: Dedicated Service Lines (Clean, Visual, Concise) -->
+      <section id="services" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+              Tailored Cleaning Scopes
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+              Residential & Commercial Excellence
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2">
+              Structured protocols with strict chain-of-custody, bonded staff, and supervisor check-off sheets on every assignment.
+            </p>
+          </div>
+
+          <!-- Residential Cards Grid -->
+          <div class="mb-14">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="w-2.5 h-2.5 rounded-full bg-brand-blue"></div>
+              <h3 class="text-lg font-extrabold text-navy-900 uppercase tracking-wider">Residential Scopes</h3>
+              <span class="text-xs text-slate-400 font-medium">Condos · Townhomes · Luxury Estates</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              <!-- Card 1 -->
+              <div class="rounded-xl bg-white border border-slate-200 hover:border-slate-300 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-4">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Scope 01</div>
+                  <h4 class="text-lg font-bold text-navy-900 mt-1">Deep Architectural Clean</h4>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Total deep rejuvenation: crown moldings, baseboards, grout lifting, appliance interiors, and vent micro-dusting.
+                  </p>
+                  
+                  <ul class="mt-4 space-y-2 text-xs text-slate-700">
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Inside ovens, range hoods & fridge detail</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Steam tile & stone grout lifting</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Baseboards, window tracks & blinds</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-5 mt-6 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-xs font-extrabold text-navy-900">From $285 / visit</span>
+                  <a
+                    href="#estimator"
+                    onclick="configureEstimator('residential', 1800, 'deep')"
+                    class="px-3.5 py-1.5 rounded-md text-xs font-bold text-white bg-brand-blue hover:bg-brand-blueHover transition-colors"
+                  >
+                    Calculate Rate &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 2 (Popular) -->
+              <div class="rounded-xl bg-white border-2 border-brand-blue p-6 shadow-md transition-all flex flex-col justify-between relative">
+                <div class="absolute -top-3 right-6 bg-brand-blue text-white text-[10px] font-extrabold uppercase tracking-wider py-0.5 px-2.5 rounded shadow-sm">
+                  Most Popular
+                </div>
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-4">
+                    <i data-lucide="repeat" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-brand-blue">Scope 02</div>
+                  <h4 class="text-lg font-bold text-navy-900 mt-1">Recurring Upkeep</h4>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Consistent weekly or bi-weekly maintenance with the same dedicated, bonded 2-specialist team every time.
+                  </p>
+                  
+                  <ul class="mt-4 space-y-2 text-xs text-slate-700">
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Save 15% with bi-weekly scheduling</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Same vetted team assigned to your home</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Fresh linens & high-touch sanitization</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-5 mt-6 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-xs font-extrabold text-brand-green">15% Cadence Discount</span>
+                  <a
+                    href="#estimator"
+                    onclick="configureEstimator('residential', 1800, 'biweekly')"
+                    class="px-3.5 py-1.5 rounded-md text-xs font-bold text-white bg-brand-blue hover:bg-brand-blueHover transition-colors"
+                  >
+                    Calculate Rate &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="rounded-xl bg-white border border-slate-200 hover:border-slate-300 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-4">
+                    <i data-lucide="box" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Scope 03</div>
+                  <h4 class="text-lg font-bold text-navy-900 mt-1">Move-In / Move-Out</h4>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Tenancy deposit protection clean. Inside every cabinet, pantry, closet, and full architectural wipe-down.
+                  </p>
+                  
+                  <ul class="mt-4 space-y-2 text-xs text-slate-700">
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Inside all kitchen cabinets & drawers</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Wall scuff lifting & door jamb sanitizing</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green shrink-0"></i>
+                      <span>Official Landlord Clean Handover Certificate</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-5 mt-6 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-xs font-extrabold text-navy-900">From $350 Complete</span>
+                  <a
+                    href="#estimator"
+                    onclick="configureEstimator('residential', 2200, 'onetime')"
+                    class="px-3.5 py-1.5 rounded-md text-xs font-bold text-white bg-brand-blue hover:bg-brand-blueHover transition-colors"
+                  >
+                    Calculate Rate &rarr;
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Commercial Cards Grid -->
+          <div>
+            <div class="flex items-center gap-2 mb-6">
+              <div class="w-2.5 h-2.5 rounded-full bg-navy-900"></div>
+              <h3 class="text-lg font-extrabold text-navy-900 uppercase tracking-wider">Commercial Scopes</h3>
+              <span class="text-xs text-slate-400 font-medium">Offices · Financial Hubs · Tech Campuses · Medical Clinics</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              <!-- Commercial 1 -->
+              <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 text-brand-blue flex items-center justify-center mb-4">
+                    <i data-lucide="building" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-xs font-bold text-slate-400 uppercase">Facility 01</div>
+                  <h4 class="text-lg font-bold text-navy-900 mt-1">Routine Office Janitorial</h4>
+                  <p class="text-xs text-slate-600 mt-2">
+                    Nightly or 3x/wk maintenance: desks, conference suites, breakrooms, and executive restroom sanitization.
+                  </p>
+                </div>
+                <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+                  <span class="text-xs font-bold text-brand-blue">From $1,200 / mo</span>
+                  <a href="#estimator" onclick="configureEstimator('commercial', 5000, '3x')" class="text-xs font-bold text-navy-900 hover:text-brand-blue">Configure &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Commercial 2 -->
+              <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 text-brand-blue flex items-center justify-center mb-4">
+                    <i data-lucide="moon" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-xs font-bold text-slate-400 uppercase">Facility 02</div>
+                  <h4 class="text-lg font-bold text-navy-900 mt-1">After-Hours Facility Care</h4>
+                  <p class="text-xs text-slate-600 mt-2">
+                    Silent overnight execution with keycard-badged teams, high security clearance, and electronic supervisor logs.
+                  </p>
+                </div>
+                <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+                  <span class="text-xs font-bold text-brand-green">5x / Week Schedule</span>
+                  <a href="#estimator" onclick="configureEstimator('commercial', 8000, '5x')" class="text-xs font-bold text-navy-900 hover:text-brand-blue">Configure &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Commercial 3 -->
+              <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:bg-white hover:border-slate-300 transition-all">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 text-brand-blue flex items-center justify-center mb-4">
+                    <i data-lucide="activity" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-xs font-bold text-slate-400 uppercase">Facility 03</div>
+                  <h4 class="text-lg font-bold text-navy-900 mt-1">Commercial Floor Scrubbing</h4>
+                  <p class="text-xs text-slate-600 mt-2">
+                    Diamond terrazzo polishing, high-speed rotary auto-scrubbing, and hot-water extraction broadloom carpet shampooing.
+                  </p>
+                </div>
+                <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+                  <span class="text-xs font-bold text-brand-blue">Restorative Care</span>
+                  <a href="#estimator" onclick="configureEstimator('commercial', 12000, '5x')" class="text-xs font-bold text-navy-900 hover:text-brand-blue">Configure &rarr;</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4: Interactive Dual-Mode Quote Estimator (Clean, Executive Design) -->
+      <section id="estimator" class="py-16 lg:py-24 bg-surface-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
+              <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+              Instant Live Calculator
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+              Transparent Estimate in Seconds
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2">
+              Select your property type and customize cadence for instant locked pricing.
+            </p>
+
+            <!-- Mode Switcher: Residential vs Commercial -->
+            <div class="inline-flex p-1 rounded-lg bg-white border border-slate-300 shadow-sm mt-6">
+              <button
+                type="button"
+                id="tabResidential"
+                onclick="setMode('residential')"
+                class="px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all"
+              >
+                Residential Home
+              </button>
+              <button
+                type="button"
+                id="tabCommercial"
+                onclick="setMode('commercial')"
+                class="px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all"
+              >
+                Commercial Facility
+              </button>
+            </div>
+          </div>
+
+          <!-- Estimator Main Card -->
+          <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 lg:p-10 shadow-sm">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+              
+              <!-- Left Controls -->
+              <div class="lg:col-span-7 space-y-7">
+                
+                <!-- RESIDENTIAL CONTROLS -->
+                <div id="residentialControls" class="space-y-6">
+                  
+                  <!-- Square Footage Slider -->
+                  <div class="bg-surface-50 p-5 rounded-xl border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                      <label for="resSqftSlider" class="text-xs font-extrabold uppercase tracking-wider text-slate-800">
+                        Square Footage
+                      </label>
+                      <span class="text-base font-extrabold font-mono text-navy-900 bg-white px-3 py-1 rounded border border-slate-200 shadow-sm">
+                        <span id="resSqftDisplay">1,800</span> sq.ft
+                      </span>
+                    </div>
+
+                    <input
+                      id="resSqftSlider"
+                      type="range"
+                      min="500"
+                      max="4500"
+                      step="100"
+                      value="1800"
+                      class="w-full h-2 cursor-pointer mt-2"
+                    />
+
+                    <!-- Quick buttons -->
+                    <div class="flex flex-wrap gap-2 mt-3">
+                      <button type="button" onclick="setResSqft(900)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">900 sq.ft</button>
+                      <button type="button" onclick="setResSqft(1800)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">1,800 sq.ft</button>
+                      <button type="button" onclick="setResSqft(2800)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">2,800 sq.ft</button>
+                      <button type="button" onclick="setResSqft(4000)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">4,000+ sq.ft</button>
+                    </div>
+                  </div>
+
+                  <!-- Bedrooms & Bathrooms Counters -->
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-surface-50 p-4 rounded-xl border border-slate-200">
+                      <div class="text-xs font-bold text-slate-500">Bedrooms</div>
+                      <div class="flex items-center justify-between mt-2">
+                        <span id="resBedDisplay" class="text-lg font-extrabold text-navy-900">3 Beds</span>
+                        <div class="flex items-center gap-1">
+                          <button type="button" onclick="updateCounter('bed', -1)" class="w-7 h-7 rounded bg-white border border-slate-300 font-bold hover:bg-slate-100 flex items-center justify-center">-</button>
+                          <button type="button" onclick="updateCounter('bed', 1)" class="w-7 h-7 rounded bg-white border border-slate-300 font-bold hover:bg-slate-100 flex items-center justify-center">+</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bg-surface-50 p-4 rounded-xl border border-slate-200">
+                      <div class="text-xs font-bold text-slate-500">Bathrooms</div>
+                      <div class="flex items-center justify-between mt-2">
+                        <span id="resBathDisplay" class="text-lg font-extrabold text-navy-900">2.5 Baths</span>
+                        <div class="flex items-center gap-1">
+                          <button type="button" onclick="updateCounter('bath', -0.5)" class="w-7 h-7 rounded bg-white border border-slate-300 font-bold hover:bg-slate-100 flex items-center justify-center">-</button>
+                          <button type="button" onclick="updateCounter('bath', 0.5)" class="w-7 h-7 rounded bg-white border border-slate-300 font-bold hover:bg-slate-100 flex items-center justify-center">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Frequency Selector with Emerald Badges -->
+                  <div>
+                    <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-800 mb-2">
+                      Cleaning Frequency
+                    </label>
+                    <div class="grid grid-cols-3 gap-3">
+                      <button
+                        type="button"
+                        onclick="setResFrequency('onetime')"
+                        id="freqBtnOnetime"
+                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                      >
+                        <div>One-Time</div>
+                        <div class="text-[10px] text-slate-400 font-normal">Standard Base</div>
+                      </button>
+
+                      <button
+                        type="button"
+                        onclick="setResFrequency('biweekly')"
+                        id="freqBtnBiweekly"
+                        class="p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all"
+                      >
+                        <div>Bi-Weekly</div>
+                        <div class="text-[10px] text-brand-green font-extrabold">Save 15% (Popular)</div>
+                      </button>
+
+                      <button
+                        type="button"
+                        onclick="setResFrequency('monthly')"
+                        id="freqBtnMonthly"
+                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                      >
+                        <div>Monthly</div>
+                        <div class="text-[10px] text-brand-green font-extrabold">Save 10%</div>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Optional Add-ons -->
+                  <div>
+                    <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-800 mb-2">
+                      Optional Upgrades
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                      <label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-50 border border-slate-200 cursor-pointer hover:border-slate-300">
+                        <span class="flex items-center gap-2">
+                          <input type="checkbox" id="addonOven" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
+                          <span class="font-medium text-slate-800">Inside Oven & Range Hood</span>
+                        </span>
+                        <span class="font-bold text-navy-900">+$65</span>
+                      </label>
+                      <label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-50 border border-slate-200 cursor-pointer hover:border-slate-300">
+                        <span class="flex items-center gap-2">
+                          <input type="checkbox" id="addonFridge" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
+                          <span class="font-medium text-slate-800">Refrigerator Sanitization</span>
+                        </span>
+                        <span class="font-bold text-navy-900">+$55</span>
+                      </label>
+                      <label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-50 border border-slate-200 cursor-pointer hover:border-slate-300">
+                        <span class="flex items-center gap-2">
+                          <input type="checkbox" id="addonWindows" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
+                          <span class="font-medium text-slate-800">Interior Windows & Tracks</span>
+                        </span>
+                        <span class="font-bold text-navy-900">+$85</span>
+                      </label>
+                      <label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-50 border border-slate-200 cursor-pointer hover:border-slate-300">
+                        <span class="flex items-center gap-2">
+                          <input type="checkbox" id="addonCabinets" onchange="calculateTotal()" class="w-4 h-4 rounded text-brand-blue accent-brand-blue" />
+                          <span class="font-medium text-slate-800">Inside Cabinets & Drawers</span>
+                        </span>
+                        <span class="font-bold text-navy-900">+$75</span>
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- COMMERCIAL CONTROLS -->
+                <div id="commercialControls" class="hidden space-y-6">
+                  
+                  <div class="bg-surface-50 p-5 rounded-xl border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                      <label for="commSqftSlider" class="text-xs font-extrabold uppercase tracking-wider text-slate-800">
+                        Commercial Facility Size
+                      </label>
+                      <span class="text-base font-extrabold font-mono text-navy-900 bg-white px-3 py-1 rounded border border-slate-200 shadow-sm">
+                        <span id="commSqftDisplay">6,500</span> sq.ft
+                      </span>
+                    </div>
+
+                    <input
+                      id="commSqftSlider"
+                      type="range"
+                      min="1000"
+                      max="25000"
+                      step="500"
+                      value="6500"
+                      class="w-full h-2 cursor-pointer mt-2"
+                    />
+
+                    <div class="flex flex-wrap gap-2 mt-3">
+                      <button type="button" onclick="setCommSqft(2500)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">2,500 sq.ft</button>
+                      <button type="button" onclick="setCommSqft(6500)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">6,500 sq.ft</button>
+                      <button type="button" onclick="setCommSqft(12000)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">12,000 sq.ft</button>
+                      <button type="button" onclick="setCommSqft(20000)" class="px-2.5 py-1 text-xs font-semibold rounded bg-white border border-slate-200 hover:border-slate-400">20,000+ sq.ft</button>
+                    </div>
+                  </div>
+
+                  <!-- Schedule Cadence -->
+                  <div>
+                    <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-800 mb-2">
+                      Weekly Janitorial Cadence
+                    </label>
+                    <div class="grid grid-cols-3 gap-3">
+                      <button
+                        type="button"
+                        onclick="setCommFrequency('3x')"
+                        id="commFreqBtn3x"
+                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                      >
+                        <div>3x / Week</div>
+                        <div class="text-[10px] text-slate-400 font-normal">Mon/Wed/Fri</div>
+                      </button>
+
+                      <button
+                        type="button"
+                        onclick="setCommFrequency('5x')"
+                        id="commFreqBtn5x"
+                        class="p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all"
+                      >
+                        <div>5x / Week</div>
+                        <div class="text-[10px] text-brand-blue font-extrabold">Mon – Fri (Standard)</div>
+                      </button>
+
+                      <button
+                        type="button"
+                        onclick="setCommFrequency('7x')"
+                        id="commFreqBtn7x"
+                        class="p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors"
+                      >
+                        <div>7x / Week</div>
+                        <div class="text-[10px] text-slate-400 font-normal">24/7 Coverage</div>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Right Price Display Card (Solid Deep Navy, Crisp White & Green Accents) -->
+              <div class="lg:col-span-5 bg-navy-900 text-white rounded-xl p-6 sm:p-7 space-y-6 shadow-md">
+                
+                <div class="border-b border-navy-800 pb-4">
+                  <div class="text-xs font-mono text-blue-300 uppercase tracking-widest">Locked Estimate</div>
+                  <div id="summaryModeLabel" class="text-lg font-bold text-white mt-1">Residential Service Estimate</div>
+                  <div id="summarySubLabel" class="text-xs text-slate-300 font-mono mt-1">1,800 sq.ft · Bi-Weekly Cadence</div>
+                </div>
+
+                <!-- Price Box -->
+                <div class="bg-navy-950 rounded-lg p-5 border border-navy-800">
+                  <div class="text-xs text-slate-300 uppercase tracking-wider font-semibold">Estimated Investment:</div>
+                  <div class="flex items-baseline gap-2 mt-1">
+                    <span id="priceRangeDisplay" class="text-3xl sm:text-4xl font-black font-mono text-white tabular-nums">
+                      $275 – $320
+                    </span>
+                    <span id="pricePeriodDisplay" class="text-xs font-bold text-slate-300">/ visit</span>
+                  </div>
+                  
+                  <div id="discountNote" class="text-xs text-brand-green font-semibold mt-2 flex items-center gap-1.5">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                    <span>Includes 15% bi-weekly client savings</span>
+                  </div>
+                </div>
+
+                <!-- Itemized Breakdown -->
+                <div class="space-y-2 text-xs text-slate-300 border-b border-navy-800 pb-4">
+                  <div class="flex items-center justify-between">
+                    <span>Base Scope:</span>
+                    <span id="breakdownBase" class="font-mono font-bold text-white tabular-nums">$320.00</span>
+                  </div>
+                  <div id="breakdownFreqRow" class="flex items-center justify-between text-brand-green font-semibold">
+                    <span>Recurring Discount (15%):</span>
+                    <span id="breakdownDiscount" class="font-mono tabular-nums">-$48.00</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>Estimated Team & Time:</span>
+                    <span id="breakdownTeam" class="font-mono text-white">2 Specialists · ~3.5 hrs</span>
+                  </div>
+                </div>
+
+                <!-- Action Button -->
+                <div>
+                  <button
+                    type="button"
+                    onclick="openProposalModal()"
+                    class="w-full py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover transition-colors flex items-center justify-center gap-2"
+                  >
+                    <i data-lucide="lock" class="w-4 h-4"></i>
+                    <span id="ctaBtnText">Lock In This Locked Estimate</span>
+                  </button>
+                  <p class="text-[11px] text-slate-400 text-center mt-2">
+                    No advance deposit required. Guaranteed 24-hour turnaround.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5: Verified Client Reviews -->
+      <section id="reviews" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200 mb-3">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
+              Social Proof & Audit Logs
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+              Validated by Penthouses & Enterprises
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2">
+              Real verified experiences from luxury homeowners and Fortune 500 corporate facility leaders.
+            </p>
+          </div>
+
+          <!-- Reviews Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div>
+                <div class="flex items-center gap-1 text-amber-500 mb-3">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
+                  "ShineCNDA tackled our post-renovation Tribeca loft. In under 7 hours, drywall dust was entirely gone from our 14-foot ceiling cornices and custom walnut millwork. Absolutely spotless."
+                </p>
+              </div>
+              <div class="pt-4 mt-6 border-t border-slate-200">
+                <div class="text-sm font-bold text-navy-900">Elena Vance</div>
+                <div class="text-xs text-slate-500">Homeowner · Tribeca Penthouse</div>
+                <div class="text-[11px] font-mono text-brand-green font-semibold mt-0.5">Bi-Weekly Client</div>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div>
+                <div class="flex items-center gap-1 text-amber-500 mb-3">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
+                  "Managing a 35,000 sq.ft biotech headquarters demands 100% night staff attendance. ShineCNDA has never missed a single scheduled shift in 18 months, with automated photo reports every morning."
+                </p>
+              </div>
+              <div class="pt-4 mt-6 border-t border-slate-200">
+                <div class="text-sm font-bold text-navy-900">Marcus Brody</div>
+                <div class="text-xs text-slate-500">VP Workplace Operations · Horizon BioVentures</div>
+                <div class="text-[11px] font-mono text-brand-blue font-semibold mt-0.5">5x/Week Nightly Facility Care</div>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-surface-50 border border-slate-200 p-6 flex flex-col justify-between hover:border-slate-300 transition-colors">
+              <div>
+                <div class="flex items-center gap-1 text-amber-500 mb-3">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
+                  "Discretion, bonded confidentiality, and immaculate conference room turnarounds before morning partner sessions. We wouldn't trust any other team with our law practice."
+                </p>
+              </div>
+              <div class="pt-4 mt-6 border-t border-slate-200">
+                <div class="text-sm font-bold text-navy-900">Sarah Jenkins</div>
+                <div class="text-xs text-slate-500">Senior Managing Partner · Jenkins & Sterling LLP</div>
+                <div class="text-[11px] font-mono text-brand-green font-semibold mt-0.5">Commercial Client</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 6: Frequently Asked Questions (FAQ) Accordion -->
+      <section id="faq" class="py-16 lg:py-24 bg-surface-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-blue border border-blue-200 mb-3">
+              <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+              Pre-Purchase Clarifications
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2">
+              Clear details on our $5M insurance policy, scheduling protocols, and specialist staff vetting.
+            </p>
+          </div>
+
+          <!-- Accordion Container -->
+          <div class="space-y-3.5" id="faqAccordion">
+            
+            <!-- Item 1: Insurance -->
+            <div class="faq-item rounded-lg bg-white border border-slate-200 overflow-hidden shadow-sm transition-all duration-200">
+              <button
+                type="button"
+                onclick="toggleFaq(0)"
+                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-sm sm:text-base">How are your team members insured and bonded?</span>
+                </div>
+                <i data-lucide="chevron-down" id="faqIcon0" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+              </button>
+              <div id="faqAnswer0" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                ShineCNDA carries an industry-leading <strong>$5,000,000 comprehensive general liability and umbrella insurance policy</strong>, alongside full surety bonding (Policy #SC-98214-US). Every property, antique fixture, marble installation, and high-value electronic asset is fully protected under our coverage. A Certificate of Insurance (COI) naming your property management or HOA as an additional insured can be issued within 2 hours of booking.
+              </div>
+            </div>
+
+            <!-- Item 2: Staff Vetting -->
+            <div class="faq-item rounded-lg bg-white border border-slate-200 overflow-hidden shadow-sm transition-all duration-200">
+              <button
+                type="button"
+                onclick="toggleFaq(1)"
+                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
+                    <i data-lucide="user-check" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-sm sm:text-base">How do you vet and hire cleaning specialists?</span>
+                </div>
+                <i data-lucide="chevron-down" id="faqIcon1" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+              </button>
+              <div id="faqAnswer1" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                <strong>We never use sub-contractors or gig-workers.</strong> 100% of ShineCNDA technicians are directly employed W-2 specialists who pass a multi-tier vetting process: 7-year federal & state criminal background checks, motor vehicle records, 10-panel drug screenings, and in-person luxury surface care certification. We assign the exact same dedicated 2-technician team to your recurring visits so they become familiar with your specific space and preferences.
+              </div>
+            </div>
+
+            <!-- Item 3: Scheduling & Access -->
+            <div class="faq-item rounded-lg bg-white border border-slate-200 overflow-hidden shadow-sm transition-all duration-200">
+              <button
+                type="button"
+                onclick="toggleFaq(2)"
+                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-sm sm:text-base">How does scheduling, access, and key release work?</span>
+                </div>
+                <i data-lucide="chevron-down" id="faqIcon2" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+              </button>
+              <div id="faqAnswer2" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                You never need to be home or on-site during cleaning. We accommodate all entry preferences: front desk / concierge key release, encrypted lockboxes, smart-lock one-time codes, or commercial security keycards. All access codes and keys are logged into our military-grade encrypted dispatch software. You can reschedule any visit with 24 hours advance notice without penalty.
+              </div>
+            </div>
+
+            <!-- Item 4: 24h Clean Guarantee -->
+            <div class="faq-item rounded-lg bg-white border border-slate-200 overflow-hidden shadow-sm transition-all duration-200">
+              <button
+                type="button"
+                onclick="toggleFaq(3)"
+                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-sm sm:text-base">What is the ShineCNDA 24-Hour Guarantee?</span>
+                </div>
+                <i data-lucide="chevron-down" id="faqIcon3" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+              </button>
+              <div id="faqAnswer3" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Perfection is contractual. If any surface, baseboard, glass partition, or floor falls short of pristine condition, simply inform us within 24 hours. Our quality assurance supervisor returns with our crew to reclean the affected area <strong>completely free of charge</strong>. No hassle, no debates.
+              </div>
+            </div>
+
+            <!-- Item 5: Products & Safety -->
+            <div class="faq-item rounded-lg bg-white border border-slate-200 overflow-hidden shadow-sm transition-all duration-200">
+              <button
+                type="button"
+                onclick="toggleFaq(4)"
+                class="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-navy-900 hover:text-brand-blue transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
+                    <i data-lucide="leaf" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-sm sm:text-base">Do you provide all cleaning supplies, and are they pet-safe?</span>
+                </div>
+                <i data-lucide="chevron-down" id="faqIcon4" class="w-5 h-5 text-slate-400 transition-transform duration-200"></i>
+              </button>
+              <div id="faqAnswer4" class="hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Yes. Our mobile units arrive fully stocked with commercial-grade HEPA-filtered extraction vacuums (capturing 99.97% of dust and allergens down to 0.3 microns), fresh color-coded microfiber cloths, and certified non-toxic, pet-safe, plant-derived botanical cleaners (EPA Safer Choice certified). For fine marble and untreated hardwoods, we utilize specialized pH-neutral preservation formulas.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 7: Guarantee Callout Banner (Clean Solid Navy) -->
+      <section class="py-14 bg-navy-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="space-y-2 text-center lg:text-left">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-navy-800 text-emerald-400 text-xs font-bold font-mono">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                100% UNCONDITIONAL COMMITMENT
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">The ShineCNDA 24-Hour Reclean Guarantee</h3>
+              <p class="text-slate-300 text-xs sm:text-sm max-w-xl">
+                If anything falls short of immaculate, our team recleans it within 24 hours at no extra charge. We take full accountability for your peace of mind.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+              <button
+                type="button"
+                onclick="openProposalModal()"
+                class="px-8 py-3.5 rounded-lg text-xs font-extrabold uppercase tracking-wider bg-brand-blue hover:bg-brand-blueHover text-white shadow-sm transition-colors"
+              >
+                Schedule Site Walkthrough
+              </button>
+              <a
+                href="tel:+18005557446"
+                class="px-7 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white border border-slate-700 hover:bg-navy-800 transition-colors text-center"
+              >
+                Call Concierge
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with Official Inline SVG Social Media Logos -->
+    <footer class="bg-surface-900 text-slate-400 border-t border-slate-800 pt-16 pb-12 text-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+          
+          <!-- Brand Column -->
+          <div class="lg:col-span-2 space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-navy-800 flex items-center justify-center text-white">
+                <i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i>
+              </div>
+              <span class="text-lg font-extrabold tracking-tight text-white">
+                Shine<span class="text-brand-blue">CNDA</span>
+              </span>
+            </div>
+
+            <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+              Architectural-grade residential and commercial cleaning services. Setting the standard for predictable perfection across high-value residences and corporate spaces.
+            </p>
+
+            <!-- Social Media Profiles: Official Inline Vector Logos -->
+            <div class="pt-2">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-3">Connect With Us</div>
+              <div class="flex items-center gap-3">
+                
+                <!-- Instagram (Official Vector SVG) -->
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow ShineCNDA on Instagram"
+                  title="Instagram"
+                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                >
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+
+                <!-- LinkedIn (Official Vector SVG) -->
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Connect with ShineCNDA on LinkedIn"
+                  title="LinkedIn"
+                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                >
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+
+                <!-- Facebook (Official Vector SVG) -->
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow ShineCNDA on Facebook"
+                  title="Facebook"
+                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-blue-700 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                >
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                  </svg>
+                </a>
+
+                <!-- X / Twitter (Official Vector SVG) -->
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow ShineCNDA on X"
+                  title="X (Twitter)"
+                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                >
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+
+                <!-- YouTube (Official Vector SVG) -->
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Subscribe to ShineCNDA on YouTube"
+                  title="YouTube"
+                  class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700"
+                >
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="pt-2 text-[11px] font-mono text-slate-500">
+              Policy #SC-98214-US · Bonded & Insured $5M
+            </div>
+          </div>
+
+          <!-- Residential Links -->
+          <div>
+            <div class="font-bold text-white uppercase tracking-wider mb-3">Residential Scopes</div>
+            <ul class="space-y-2 text-slate-400">
+              <li><a href="#services" class="hover:text-white transition-colors">Deep Architectural Clean</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Recurring Bi-Weekly Care</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Move-in / Move-out Handover</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Marble & Stone Polishing</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Air Duct Micro-Extraction</a></li>
+            </ul>
+          </div>
+
+          <!-- Commercial Links -->
+          <div>
+            <div class="font-bold text-white uppercase tracking-wider mb-3">Commercial Care</div>
+            <ul class="space-y-2 text-slate-400">
+              <li><a href="#services" class="hover:text-white transition-colors">Routine Office Maintenance</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">After-Hours Facility Care</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Terrazzo Floor Auto-Scrub</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Medical Clinic Sanitization</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Day Porter Logistics</a></li>
+            </ul>
+          </div>
+
+          <!-- Direct Operations -->
+          <div>
+            <div class="font-bold text-white uppercase tracking-wider mb-3">Direct Contact</div>
+            <div class="space-y-2.5 text-slate-300">
+              <div>
+                <div class="text-[10px] text-slate-500 uppercase font-mono">Concierge Desk</div>
+                <a href="tel:+18005557446" class="font-bold text-white hover:text-brand-blue">(800) 555-7446</a>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500 uppercase font-mono">Operations Dispatch</div>
+                <a href="mailto:concierge@shinecnda.com" class="hover:text-white">concierge@shinecnda.com</a>
+              </div>
+              <div>
+                <div class="text-[10px] text-slate-500 uppercase font-mono">Headquarters</div>
+                <div class="text-slate-400">450 Lexington Ave, Suite 1800</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+          <div>© 2026 ShineCNDA. All rights reserved. Registered Bonded Cleaning Corporation.</div>
+          <div class="flex items-center gap-4">
+            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            <span>·</span>
+            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            <span>·</span>
+            <a href="#" class="hover:text-white transition-colors">Environmental Charter</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Interactive Proposal / Walkthrough Modal -->
+    <div
+      id="proposalModal"
+      class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/75 backdrop-blur-sm p-4 sm:p-6 lg:p-8 flex items-center justify-center transition-opacity"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="bg-white rounded-xl border border-slate-200 max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+        
+        <button
+          type="button"
+          onclick="closeProposalModal()"
+          class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-900 transition-colors"
+          aria-label="Close Dialog"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <div id="modalFormContainer">
+          <div class="mb-5">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-bold bg-blue-50 text-brand-blue border border-blue-200">
+              <i data-lucide="check" class="w-3 h-3"></i>
+              Rate Locked Online
+            </span>
+            <h3 id="modalTitle" class="text-xl font-extrabold text-navy-900 mt-2">Book Your Site Walkthrough</h3>
+            
+            <div class="mt-3 p-3 bg-surface-50 rounded-lg border border-slate-200 flex items-center justify-between text-xs">
+              <div>
+                <span class="text-slate-500" id="modalScopeType">Residential Estimate:</span>
+                <span class="font-bold text-navy-900 ml-1" id="modalScopeDetail">1,800 sq.ft · Bi-Weekly</span>
+              </div>
+              <div class="font-mono font-black text-brand-blue" id="modalEstimateNumber">$275 – $320</div>
+            </div>
+          </div>
+
+          <form id="leadProposalForm" onsubmit="handleProposalSubmit(event)" class="space-y-3.5 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="leadName" class="block font-bold text-slate-800 mb-1">Full Name *</label>
+                <input
+                  type="text"
+                  id="leadName"
+                  required
+                  placeholder="e.g. Jessica Taylor"
+                  class="w-full px-3 py-2.5 rounded-md border border-slate-300 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue bg-white text-slate-900"
+                />
+              </div>
+
+              <div>
+                <label for="leadPhone" class="block font-bold text-slate-800 mb-1">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="leadPhone"
+                  required
+                  placeholder="(555) 000-0000"
+                  class="w-full px-3 py-2.5 rounded-md border border-slate-300 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue bg-white text-slate-900"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="leadEmail" class="block font-bold text-slate-800 mb-1">Email Address *</label>
+              <input
+                type="email"
+                id="leadEmail"
+                required
+                placeholder="client@domain.com"
+                class="w-full px-3 py-2.5 rounded-md border border-slate-300 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue bg-white text-slate-900"
+              />
+            </div>
+
+            <div>
+              <label for="leadAddress" class="block font-bold text-slate-800 mb-1">Property or Office Address *</label>
+              <input
+                type="text"
+                id="leadAddress"
+                required
+                placeholder="Street Address, Suite / Unit, City"
+                class="w-full px-3 py-2.5 rounded-md border border-slate-300 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue bg-white text-slate-900"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="leadDate" class="block font-bold text-slate-800 mb-1">Target Start Date</label>
+                <input
+                  type="date"
+                  id="leadDate"
+                  class="w-full px-3 py-2.5 rounded-md border border-slate-300 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue bg-white text-slate-900"
+                />
+              </div>
+
+              <div>
+                <label for="leadAccess" class="block font-bold text-slate-800 mb-1">Access Preference</label>
+                <select
+                  id="leadAccess"
+                  class="w-full px-3 py-2.5 rounded-md border border-slate-300 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue bg-white text-slate-900"
+                >
+                  <option value="concierge">Concierge / Doorman Release</option>
+                  <option value="lockbox">Lockbox / Keyless Smart Lock</option>
+                  <option value="present">Client / Manager Present</option>
+                  <option value="keycard">Security Desk / Commercial Keycard</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button
+                type="submit"
+                id="modalSubmitBtn"
+                class="w-full py-3.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-white bg-brand-blue hover:bg-brand-blueHover shadow-sm transition-colors"
+              >
+                Confirm Walkthrough & Lock Rate
+              </button>
+            </div>
+
+            <div class="text-[11px] text-slate-500 text-center">
+              A ShineCNDA operations concierge will contact you within 2 business hours.
+            </div>
+          </form>
+        </div>
+
+        <!-- Success State -->
+        <div id="modalSuccessContainer" class="hidden text-center py-8 space-y-4">
+          <div class="w-12 h-12 rounded-full bg-brand-greenLight text-brand-green mx-auto flex items-center justify-center">
+            <i data-lucide="check" class="w-6 h-6 stroke-[3]"></i>
+          </div>
+
+          <div>
+            <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Request Confirmed</div>
+            <h3 class="text-xl font-bold text-navy-900 mt-1">Walkthrough & Rate Locked</h3>
+            <p class="text-xs text-slate-600 mt-2 max-w-sm mx-auto leading-relaxed">
+              Your rate lock reference <span id="successRefCode" class="font-mono font-bold text-navy-900">#SC-2026-9281</span> has been queued for immediate concierge dispatch.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <button
+              type="button"
+              onclick="closeProposalModal()"
+              class="px-6 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider text-slate-800 bg-surface-50 border border-slate-300 hover:border-slate-800"
+            >
+              Close Window
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div
+      id="toastFeedback"
+      class="fixed bottom-6 right-6 z-50 bg-navy-900 text-white px-4 py-3 rounded-lg text-xs font-semibold border border-navy-800 shadow-xl hidden transition-all duration-200 flex items-center gap-3"
+    >
+      <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+      <span id="toastMessage">Estimate updated</span>
+    </div>
+
+    <!-- Application JavaScript Logic -->
+    <script>
+      // App State
+      const state = {
+        mode: 'residential',
+        resSqft: 1800,
+        resBeds: 3,
+        resBaths: 2.5,
+        resType: 'deep',
+        resFreq: 'biweekly',
+        commSqft: 6500,
+        commFreq: '5x',
+        sliderSpaceIndex: 0,
+        sliderPosition: 50 // Centered exactly at 50%
+      };
+
+      // Real Domain Spaces
+      const spaces = [
+        {
+          name: "Luxury Chef's Kitchen Island",
+          spec: "Calacatta Marble & Hardwood Handover",
+          imgUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
+          scope: "Post-Renovation Stone Reconditioning",
+          metric: "100% Zero-Residue Sign-Off"
+        },
+        {
+          name: "Executive Glass Boardroom",
+          spec: "Polished Terrazzo & Acoustic Glass Walls",
+          imgUrl: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80",
+          scope: "High-Traffic Commercial Glass & Floor Buffing",
+          metric: "Streakless Crystal Transparency"
+        },
+        {
+          name: "Penthouse Master Bathroom",
+          spec: "Italian Carrara Marble & Frameless Shower",
+          imgUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80",
+          scope: "Hard-Water Mineral & Grout Rejuvenation",
+          metric: "Hospital-Grade Touchpoint Sanitization"
+        }
+      ];
+
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.lucide) window.lucide.createIcons();
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener('click', () => {
+            const isExp = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExp);
+            mobileMenu.classList.toggle('hidden');
+          });
+
+          document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+              mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+
+        // Before/After Slider Interaction
+        initSlider();
+
+        // Estimator Sliders
+        const resSqftSlider = document.getElementById('resSqftSlider');
+        if (resSqftSlider) {
+          resSqftSlider.addEventListener('input', (e) => {
+            state.resSqft = parseInt(e.target.value, 10);
+            document.getElementById('resSqftDisplay').textContent = state.resSqft.toLocaleString();
+            calculateTotal();
+          });
+        }
+
+        const commSqftSlider = document.getElementById('commSqftSlider');
+        if (commSqftSlider) {
+          commSqftSlider.addEventListener('input', (e) => {
+            state.commSqft = parseInt(e.target.value, 10);
+            document.getElementById('commSqftDisplay').textContent = state.commSqft.toLocaleString();
+            calculateTotal();
+          });
+        }
+
+        calculateTotal();
+        selectSpace(0);
+        // Explicitly set slider right in the middle (50%) on load
+        setSliderPosition(50);
+      });
+
+      // Flawless Before/After Slider Engine using CSS clip-path inset
+      // Both images remain 100% stationary and full-size! Only the cut line moves.
+      function initSlider() {
+        const container = document.getElementById('sliderContainer');
+        if (!container) return;
+
+        let isDragging = false;
+
+        const updatePosition = (clientX) => {
+          const rect = container.getBoundingClientRect();
+          let posX = clientX - rect.left;
+          let percent = (posX / rect.width) * 100;
+          if (percent < 0) percent = 0;
+          if (percent > 100) percent = 100;
+          setSliderPosition(percent);
+        };
+
+        container.addEventListener('pointerdown', (e) => {
+          isDragging = true;
+          container.setPointerCapture(e.pointerId);
+          updatePosition(e.clientX);
+        });
+
+        container.addEventListener('pointermove', (e) => {
+          if (!isDragging) return;
+          updatePosition(e.clientX);
+        });
+
+        const stopDrag = (e) => {
+          if (isDragging) {
+            isDragging = false;
+            try { container.releasePointerCapture(e.pointerId); } catch(err) {}
+          }
+        };
+
+        container.addEventListener('pointerup', stopDrag);
+        container.addEventListener('pointercancel', stopDrag);
+      }
+
+      function setSliderPosition(percent) {
+        state.sliderPosition = percent;
+        const beforeLayer = document.getElementById('beforeLayer');
+        const sliderHandle = document.getElementById('sliderHandle');
+        const percentText = document.getElementById('sliderPercentText');
+
+        // Using clip-path inset(top right bottom left)
+        // To reveal from left to right: clip from right side by (100 - percent)%
+        if (beforeLayer) {
+          const rightInset = 100 - percent;
+          beforeLayer.style.clipPath = `inset(0 ${rightInset}% 0 0)`;
+        }
+        if (sliderHandle) {
+          sliderHandle.style.left = `${percent}%`;
+        }
+        if (percentText) {
+          percentText.textContent = `${Math.round(percent)}%`;
+        }
+      }
+
+      function selectSpace(idx) {
+        state.sliderSpaceIndex = idx;
+        const s = spaces[idx];
+        if (!s) return;
+
+        document.querySelectorAll('.space-btn').forEach((btn, i) => {
+          if (i === idx) {
+            btn.className = 'space-btn px-4 py-2 rounded-md text-xs font-bold transition-all bg-navy-900 text-white shadow-sm';
+          } else {
+            btn.className = 'space-btn px-4 py-2 rounded-md text-xs font-bold transition-all text-slate-600 hover:text-slate-900';
+          }
+        });
+
+        const imgBase = document.getElementById('sliderImgBase');
+        const imgBefore = document.getElementById('sliderImgBefore');
+        if (imgBase) imgBase.src = s.imgUrl;
+        if (imgBefore) imgBefore.src = s.imgUrl;
+
+        document.getElementById('spaceNameDisplay').textContent = s.name;
+        document.getElementById('spaceSpecDisplay').textContent = s.spec;
+        document.getElementById('spaceScope').textContent = s.scope;
+        document.getElementById('spaceMetric').textContent = s.metric;
+
+        // Keep slider centered right in the middle
+        setSliderPosition(50);
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      // Estimator Tabs
+      function setMode(mode) {
+        state.mode = mode;
+        const tabRes = document.getElementById('tabResidential');
+        const tabComm = document.getElementById('tabCommercial');
+        const resControls = document.getElementById('residentialControls');
+        const commControls = document.getElementById('commercialControls');
+        const summaryModeLabel = document.getElementById('summaryModeLabel');
+        const ctaBtnText = document.getElementById('ctaBtnText');
+
+        if (mode === 'residential') {
+          tabRes.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all';
+          tabComm.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all';
+          resControls.classList.remove('hidden');
+          commControls.classList.add('hidden');
+          summaryModeLabel.textContent = 'Residential Service Estimate';
+          ctaBtnText.textContent = 'Lock In This Estimate';
+        } else {
+          tabComm.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider bg-navy-900 text-white shadow-sm transition-all';
+          tabRes.className = 'px-6 py-2.5 rounded-md text-xs font-extrabold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all';
+          commControls.classList.remove('hidden');
+          resControls.classList.add('hidden');
+          summaryModeLabel.textContent = 'Commercial Facility Proposal';
+          ctaBtnText.textContent = 'Request Commercial Walkthrough';
+        }
+        calculateTotal();
+      }
+
+      function setResSqft(sqft) {
+        state.resSqft = sqft;
+        document.getElementById('resSqftSlider').value = sqft;
+        document.getElementById('resSqftDisplay').textContent = sqft.toLocaleString();
+        calculateTotal();
+      }
+
+      function setCommSqft(sqft) {
+        state.commSqft = sqft;
+        document.getElementById('commSqftSlider').value = sqft;
+        document.getElementById('commSqftDisplay').textContent = sqft.toLocaleString();
+        calculateTotal();
+      }
+
+      function updateCounter(type, delta) {
+        if (type === 'bed') {
+          state.resBeds = Math.max(1, Math.min(8, state.resBeds + delta));
+          document.getElementById('resBedDisplay').textContent = `${state.resBeds} Bed${state.resBeds > 1 ? 's' : ''}`;
+        } else if (type === 'bath') {
+          state.resBaths = Math.max(1, Math.min(6, state.resBaths + delta));
+          document.getElementById('resBathDisplay').textContent = `${state.resBaths} Bath${state.resBaths > 1 ? 's' : ''}`;
+        }
+        calculateTotal();
+      }
+
+      function setResFrequency(freq) {
+        state.resFreq = freq;
+        const bOne = document.getElementById('freqBtnOnetime');
+        const bBi = document.getElementById('freqBtnBiweekly');
+        const bMon = document.getElementById('freqBtnMonthly');
+
+        [bOne, bBi, bMon].forEach(b => {
+          b.className = 'p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors';
+        });
+
+        if (freq === 'biweekly') {
+          bBi.className = 'p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
+        } else if (freq === 'monthly') {
+          bMon.className = 'p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
+        } else {
+          bOne.className = 'p-3 text-center rounded-lg border-2 border-navy-900 bg-navy-900 text-white text-xs font-bold transition-all';
+        }
+        calculateTotal();
+      }
+
+      function setCommFrequency(freq) {
+        state.commFreq = freq;
+        const b3 = document.getElementById('commFreqBtn3x');
+        const b5 = document.getElementById('commFreqBtn5x');
+        const b7 = document.getElementById('commFreqBtn7x');
+
+        [b3, b5, b7].forEach(b => {
+          b.className = 'p-3 text-center rounded-lg border border-slate-200 bg-surface-50 text-xs font-bold hover:border-slate-400 transition-colors';
+        });
+
+        if (freq === '5x') {
+          b5.className = 'p-3 text-center rounded-lg border-2 border-brand-blue bg-blue-50 text-brand-blue text-xs font-bold transition-all';
+        } else if (freq === '7x') {
+          b7.className = 'p-3 text-center rounded-lg border-2 border-navy-900 bg-navy-900 text-white text-xs font-bold transition-all';
+        } else {
+          b3.className = 'p-3 text-center rounded-lg border-2 border-slate-900 bg-slate-900 text-white text-xs font-bold transition-all';
+        }
+        calculateTotal();
+      }
+
+      function calculateTotal() {
+        const priceRangeDisplay = document.getElementById('priceRangeDisplay');
+        const pricePeriodDisplay = document.getElementById('pricePeriodDisplay');
+        const summarySubLabel = document.getElementById('summarySubLabel');
+        const discountNote = document.getElementById('discountNote');
+        const breakdownBase = document.getElementById('breakdownBase');
+        const breakdownFreqRow = document.getElementById('breakdownFreqRow');
+        const breakdownDiscount = document.getElementById('breakdownDiscount');
+        const breakdownTeam = document.getElementById('breakdownTeam');
+
+        if (state.mode === 'residential') {
+          let baseRate = 140 + (state.resSqft * 0.085) + (state.resBeds * 15) + (state.resBaths * 20);
+          
+          let discountPct = 0;
+          let freqLabel = 'One-Time Base';
+          if (state.resFreq === 'biweekly') {
+            discountPct = 0.15;
+            freqLabel = 'Bi-Weekly Cadence';
+          } else if (state.resFreq === 'monthly') {
+            discountPct = 0.10;
+            freqLabel = 'Monthly Cadence';
+          }
+
+          const discountAmount = baseRate * discountPct;
+
+          let addonTotal = 0;
+          if (document.getElementById('addonOven')?.checked) addonTotal += 65;
+          if (document.getElementById('addonFridge')?.checked) addonTotal += 55;
+          if (document.getElementById('addonWindows')?.checked) addonTotal += 85;
+          if (document.getElementById('addonCabinets')?.checked) addonTotal += 75;
+
+          const netSubtotal = baseRate - discountAmount + addonTotal;
+          const lowEstimate = Math.round(netSubtotal * 0.95);
+          const highEstimate = Math.round(netSubtotal * 1.08);
+
+          priceRangeDisplay.textContent = `$${lowEstimate} – $${highEstimate}`;
+          pricePeriodDisplay.textContent = '/ visit';
+          summarySubLabel.textContent = `${state.resSqft.toLocaleString()} sq.ft · ${state.resBeds} Beds, ${state.resBaths} Baths · ${freqLabel}`;
+
+          if (discountPct > 0) {
+            discountNote.classList.remove('hidden');
+            discountNote.innerHTML = `
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>Includes ${Math.round(discountPct * 100)}% recurring client discount</span>
+            `;
+            breakdownFreqRow.classList.remove('hidden');
+            breakdownDiscount.textContent = `-$${discountAmount.toFixed(2)}`;
+          } else {
+            discountNote.classList.add('hidden');
+            breakdownFreqRow.classList.add('hidden');
+          }
+
+          breakdownBase.textContent = `$${baseRate.toFixed(2)}`;
+          let hours = (state.resSqft / 650);
+          let crew = state.resSqft > 2500 ? 3 : 2;
+          let clockHours = (hours / crew).toFixed(1);
+          breakdownTeam.textContent = `${crew} Specialists · ~${clockHours} hrs`;
+
+        } else {
+          // Commercial
+          let ratePerSqft = 0.16;
+          let freqMultiplier = state.commFreq === '5x' ? 1.45 : (state.commFreq === '7x' ? 1.95 : 1.0);
+          let monthlyBaseline = (state.commSqft * ratePerSqft) * freqMultiplier;
+          if (monthlyBaseline < 950) monthlyBaseline = 950;
+
+          const lowMonthly = Math.round(monthlyBaseline * 0.94);
+          const highMonthly = Math.round(monthlyBaseline * 1.08);
+
+          priceRangeDisplay.textContent = `$${lowMonthly.toLocaleString()} – $${highMonthly.toLocaleString()}`;
+          pricePeriodDisplay.textContent = '/ month';
+          summarySubLabel.textContent = `${state.commSqft.toLocaleString()} sq.ft · Commercial Facility (${state.commFreq})`;
+
+          discountNote.classList.remove('hidden');
+          discountNote.innerHTML = `
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <span>Includes supervisor daily audits & $5M insurance</span>
+          `;
+
+          breakdownBase.textContent = `$${monthlyBaseline.toFixed(2)}`;
+          breakdownFreqRow.classList.add('hidden');
+          let staffCount = Math.max(2, Math.round(state.commSqft / 4000));
+          breakdownTeam.textContent = `${staffCount} Dedicated Technicians + 1 Shift Lead`;
+        }
+
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      function configureEstimator(mode, sqft, option) {
+        setMode(mode);
+        if (mode === 'residential') {
+          setResSqft(sqft);
+          if (option === 'biweekly') setResFrequency('biweekly');
+          if (option === 'onetime') setResFrequency('onetime');
+        } else {
+          setCommSqft(sqft);
+          if (option === '3x') setCommFrequency('3x');
+          if (option === '5x') setCommFrequency('5x');
+        }
+      }
+
+      // FAQ Accordion Toggle
+      function toggleFaq(index) {
+        const answer = document.getElementById(`faqAnswer${index}`);
+        const icon = document.getElementById(`faqIcon${index}`);
+        if (!answer || !icon) return;
+
+        const isHidden = answer.classList.contains('hidden');
+
+        // Close others
+        for (let i = 0; i < 5; i++) {
+          const a = document.getElementById(`faqAnswer${i}`);
+          const ic = document.getElementById(`faqIcon${i}`);
+          if (a && ic) {
+            a.classList.add('hidden');
+            ic.classList.remove('rotate-180');
+          }
+        }
+
+        if (isHidden) {
+          answer.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      }
+
+      // Modal Handling
+      function openProposalModal() {
+        const modal = document.getElementById('proposalModal');
+        const formContainer = document.getElementById('modalFormContainer');
+        const successContainer = document.getElementById('modalSuccessContainer');
+        const modalScopeType = document.getElementById('modalScopeType');
+        const modalScopeDetail = document.getElementById('modalScopeDetail');
+        const modalEstimateNumber = document.getElementById('modalEstimateNumber');
+        const priceRangeDisplay = document.getElementById('priceRangeDisplay');
+
+        formContainer.classList.remove('hidden');
+        successContainer.classList.add('hidden');
+
+        if (state.mode === 'residential') {
+          modalScopeType.textContent = 'Residential Estimate:';
+          modalScopeDetail.textContent = `${state.resSqft.toLocaleString()} sq.ft · ${state.resBeds} Bed / ${state.resBaths} Bath`;
+        } else {
+          modalScopeType.textContent = 'Commercial RFP:';
+          modalScopeDetail.textContent = `${state.commSqft.toLocaleString()} sq.ft · Commercial (${state.commFreq})`;
+        }
+        modalEstimateNumber.textContent = priceRangeDisplay.textContent + ' ' + document.getElementById('pricePeriodDisplay').textContent;
+
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeProposalModal() {
+        const modal = document.getElementById('proposalModal');
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      window.addEventListener('click', (e) => {
+        const modal = document.getElementById('proposalModal');
+        if (e.target === modal) closeProposalModal();
+      });
+
+      function handleProposalSubmit(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('modalSubmitBtn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Locking In Walkthrough...';
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Confirm Walkthrough & Lock Rate';
+          const randNum = Math.floor(1000 + Math.random() * 9000);
+          document.getElementById('successRefCode').textContent = `#SC-2026-${randNum}`;
+          document.getElementById('modalFormContainer').classList.add('hidden');
+          document.getElementById('modalSuccessContainer').classList.remove('hidden');
+          if (window.lucide) window.lucide.createIcons();
+          showToast(`Estimate locked under #SC-2026-${randNum}`);
+        }, 500);
+      }
+
+      function showToast(msg) {
+        const toast = document.getElementById('toastFeedback');
+        const toastMsg = document.getElementById('toastMessage');
+        if (!toast || !toastMsg) return;
+        toastMsg.textContent = msg;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3000);
+      }
+    </script>
+  </body>
+</html>
